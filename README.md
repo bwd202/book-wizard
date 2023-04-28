@@ -1,0 +1,2 @@
+# wizard-library
+Odin project #
