@@ -15,6 +15,8 @@ window.onclick = function (e) {
   }
 };
 
+const addBookBtn = document.querySelector('#add-book-btn').addEventListener('click', addBook);
+
 //
 
 let myLibrary = [];
@@ -26,6 +28,9 @@ function Book() {
   this.read = read
 }
 
-function addBook() {
+function addBook(e) {
+  e.preventDefault();
+
+  // document.createElement(div)
   
 }
