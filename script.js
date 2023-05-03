@@ -1,3 +1,12 @@
+const myLibrary = [];
+
+function Book(title, author, year, read) {
+  this.title = title,
+  this.author = author,
+  this.year = year,
+  this.read = read
+}
+
 // Modal
 const modal = document.getElementById('modal');
 
@@ -17,20 +26,15 @@ window.onclick = function (e) {
 
 const addBookBtn = document.querySelector('#add-book-btn').addEventListener('click', addBook);
 
-//
-
-let myLibrary = [];
-
-function Book() {
-  this.title = title,
-  this.author = author,
-  this.year = year,
-  this.read = read
-}
-
 function addBook(e) {
   e.preventDefault();
 
-  // document.createElement(div)
-  
+  let title = document.querySelector('#title').value;
+  let author = document.querySelector('#author').value;
+  let year = document.querySelector('#year').value;
+  // let read = document.querySelector('#read').value;
+
+  const newBook = new Book(title, author, year);
+
+  myLibrary.push(newBook);
 }
