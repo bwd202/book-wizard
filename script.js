@@ -46,7 +46,19 @@ function addBook(e) {
 // Card
 
 function createCard() {
-  if (myLibrary) {
-    console.log(myLibrary);
-  }
+  let mainDiv = document.querySelector('#main');
+
+  // if (myLibrary) {
+  //   console.log(myLibrary);
+  // }
+
+  let card = document.createElement('div');
+  let cardHeader = document.createElement('h2');
+  let bookTitle = document.createElement('p');
+  let bookAuthor = document.createElement('p');
+  let bookYear = document.createElement('p');
+
+  card.append(cardHeader,bookTitle,bookAuthor,bookYear)
+
+  mainDiv.appendChild(card);
 }
