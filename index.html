@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body class="grid">
-    <div id="header">
-      <button id="modal-toggle-btn" class="fixed z-0">Add new book</button>
+  <body class="grid w-screen h-screen relative">
+    <div id="header" class="bg-gray-400 z-0 p-10 flex justify-center">
+      <button id="modal-toggle-btn" class="bg-gray-100 px-6">
+        Add new book
+      </button>
     </div>
-    <div id="main"></div>
+    <div id="main" class="z-0"></div>
+    <!-- Modal -->
     <div
       id="modal"
-      class="z-10 hidden justify-center w-screen h-screen bg-slate-950 bg-opacity-40"
+      class="absolute inset-0 z-10 hidden justify-center w-screen h-screen bg-slate-950 bg-opacity-40"
     >
-      <div id="modal-content" class="flex flex-col w-1/2 border bg-slate-300">
+      <div
+        id="modal-content"
+        class="flex flex-col w-1/2 border bg-slate-950 bg-opacity-60"
+      >
         <h1>Add new book</h1>
         <form action="/" class="flex flex-col py-3">
           <label for="title">Title</label>
