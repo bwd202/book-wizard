@@ -14,3 +14,18 @@ window.onclick = function (e) {
     modal.classList.add('hidden');
   }
 };
+
+//
+
+let myLibrary = [];
+
+function Book() {
+  this.title = title,
+  this.author = author,
+  this.year = year,
+  this.read = read
+}
+
+function addBook() {
+  
+}
