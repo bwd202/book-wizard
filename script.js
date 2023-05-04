@@ -43,18 +43,11 @@ const addBookBtn = document
 
 // Card
 function createCard() {
+  const mainDiv = document.querySelector('#main');
+
   for (book of myLibrary) {
     const card = document.createElement('div');
-    document.querySelector('#main').appendChild(card);
-    card.outerHTML = `<div id='bookTitle' class='bg-slate-300'>${book.title}</div>`;
-
-    // const heading = document.createElement('h2');
-    // const title = document.createElement('p');
-    // title.createTextNode(book.title);
-    // const author = document.createElement('p');
-    // const year = document.createElement('p');
-    // card.append(heading, title, author, year);
-    
+    mainDiv.appendChild(card);
+    card.innerHTML = '<h2>' + book.title + '</h2>' + '<p>' + book.author + '</p>' + '<p>' + book.year + '</p>';
   }
-
 }
