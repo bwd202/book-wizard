@@ -1,10 +1,11 @@
 const myLibrary = [];
+const newBook = new Book(title, author, year);
 
 function Book(title, author, year, read) {
-  (this.title = title),
-    (this.author = author),
-    (this.year = year),
-    (this.read = read);
+    this.title = title,
+    this.author = author,
+    this.year = year,
+    this.read = read;
 }
 
 // Modal
@@ -31,21 +32,24 @@ const addBookBtn = document
 function addBook(e) {
   e.preventDefault();
 
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-  const year = document.querySelector('#year').value;
-  // let read = document.querySelector('#read').value;
+  // const title = document.querySelector('#title').textContent;
+  // const author = document.querySelector('#author').value;
+  // const year = document.querySelector('#year').value;
+  // // let read = document.querySelector('#read').value;
 
-  const newBook = new Book(title, author, year);
+  // myLibrary.push(newBook);
 
-  myLibrary.push(newBook);
+  // createCard(title, author, year);
 
-  createCard();
+  document.createElement('div').textContent = 'hello'
 }
 
 // Card
 
-function createCard() {
+function createCard(title, author, year) {
+  // for(book in myLibrary) {
+
+  // }
   let mainDiv = document.querySelector('#main');
 
   // if (myLibrary) {
@@ -54,11 +58,11 @@ function createCard() {
 
   let card = document.createElement('div');
   let cardHeader = document.createElement('h2');
-  let bookTitle = document.createElement('p');
+  title = this.title;
   let bookAuthor = document.createElement('p');
   let bookYear = document.createElement('p');
 
-  card.append(cardHeader,bookTitle,bookAuthor,bookYear)
+  card.append(cardHeader, title, bookAuthor, bookYear);
 
   mainDiv.appendChild(card);
 }
