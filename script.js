@@ -1,28 +1,14 @@
 const myLibrary = [];
 
 function Book(title, author, year, read) {
-    this.title = title,
-    this.author = author,
-    this.year = year,
-    this.read = read;
+  (this.title = title),
+    (this.author = author),
+    (this.year = year),
+    (this.read = read);
 }
 
 // Modal
 const modal = document.getElementById('modal');
-
-const modalObj = {
-  title: document.querySelector('#title'),
-  author: document.querySelector('#author'),
-  addBook: function(e) {
-    e.preventDefault();
-    const newBook = new Book(title.value, author.value)
-    myLibrary.push(newBook);
-  }
-}
-
-const addBookBtn = document
-  .querySelector('#add-book-btn')
-  .addEventListener('click', modalObj.addBook);
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
@@ -38,40 +24,37 @@ window.onclick = function (e) {
   }
 };
 
-function addBook(e) {
-  e.preventDefault();
+const modalObj = {
+  title: document.querySelector('#title'),
+  author: document.querySelector('#author'),
+  year: document.querySelector('#year'),
+  read: document.querySelector('#read'),
+  addBook: function (e) {
+    e.preventDefault();
+    const newBook = new Book(title.value, author.value, year.value, read.value);
+    myLibrary.push(newBook);
+    createCard();
+  },
+};
 
-  // const title = document.querySelector('#title').textContent;
-  // const author = document.querySelector('#author').value;
-  // const year = document.querySelector('#year').value;
-  // // let read = document.querySelector('#read').value;
-
-  // myLibrary.push(newBook);
-
-  // createCard(title, author, year);
-
-  document.createElement('div').textContent = 'hello'
-}
+const addBookBtn = document
+  .querySelector('#add-book-btn')
+  .addEventListener('click', modalObj.addBook);
 
 // Card
+function createCard() {
+  for (book of myLibrary) {
+    const card = document.createElement('div');
+    document.querySelector('#main').appendChild(card);
+    card.outerHTML = `<div id='bookTitle' class='bg-slate-500 w-6 h-10'>${book.title}</div>`;
 
-function createCard(title, author, year) {
-  // for(book in myLibrary) {
+    // const heading = document.createElement('h2');
+    // const title = document.createElement('p');
+    // title.createTextNode(book.title);
+    // const author = document.createElement('p');
+    // const year = document.createElement('p');
+    // card.append(heading, title, author, year);
+    
+  }
 
-  // }
-  let mainDiv = document.querySelector('#main');
-
-  // if (myLibrary) {
-  //   console.log(myLibrary);
-  // }
-
-  let card = document.createElement('div');
-  let cardHeader = document.createElement('h2');
-  title = this.title;
-  let bookAuthor = document.createElement('p');
-  let bookYear = document.createElement('p');
-
-  card.append(cardHeader, title, bookAuthor, bookYear);
-
-  mainDiv.appendChild(card);
 }
