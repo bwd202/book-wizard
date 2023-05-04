@@ -46,7 +46,7 @@ function createCard() {
   for (book of myLibrary) {
     const card = document.createElement('div');
     document.querySelector('#main').appendChild(card);
-    card.outerHTML = `<div id='bookTitle' class='bg-slate-500 w-6 h-10'>${book.title}</div>`;
+    card.outerHTML = `<div id='bookTitle' class='bg-slate-300'>${book.title}</div>`;
 
     // const heading = document.createElement('h2');
     // const title = document.createElement('p');
