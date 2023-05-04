@@ -1,5 +1,4 @@
 const myLibrary = [];
-const newBook = new Book(title, author, year);
 
 function Book(title, author, year, read) {
     this.title = title,
@@ -10,6 +9,20 @@ function Book(title, author, year, read) {
 
 // Modal
 const modal = document.getElementById('modal');
+
+const modalObj = {
+  title: document.querySelector('#title'),
+  author: document.querySelector('#author'),
+  addBook: function(e) {
+    e.preventDefault();
+    const newBook = new Book(title.value, author.value)
+    myLibrary.push(newBook);
+  }
+}
+
+const addBookBtn = document
+  .querySelector('#add-book-btn')
+  .addEventListener('click', modalObj.addBook);
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
@@ -24,10 +37,6 @@ window.onclick = function (e) {
     modal.classList.add('hidden');
   }
 };
-
-const addBookBtn = document
-  .querySelector('#add-book-btn')
-  .addEventListener('click', addBook);
 
 function addBook(e) {
   e.preventDefault();
