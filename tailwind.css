@@ -15,6 +15,20 @@
   border-radius: 0.5rem;
 }
 
+#modal input:last-of-type {
+  width: max-content;
+  transform: scale(1.5);
+  margin-left: 6px;
+}
+
+#modal label {
+  margin-top: 1rem;
+}
+
+#modal label + input {
+  margin-top: 0.5rem;
+}
+
 button {
   display: block;
   border-radius: 0.5rem;

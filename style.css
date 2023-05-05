@@ -542,6 +542,10 @@ video {
   z-index: 10;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .flex {
   display: flex;
 }
@@ -578,6 +582,10 @@ video {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -586,11 +594,6 @@ video {
 .bg-gray-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-slate-950 {
@@ -610,6 +613,10 @@ video {
   padding: 2.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-7 {
   padding: 1.75rem;
 }
@@ -617,11 +624,6 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 #modal {
@@ -635,6 +637,21 @@ video {
 #modal-content input[type='text'] {
   border: 1px solid #cacaca;
   border-radius: 0.5rem;
+}
+
+#modal input:last-of-type {
+  width: -moz-max-content;
+  width: max-content;
+  transform: scale(1.5);
+  margin-left: 6px;
+}
+
+#modal label {
+  margin-top: 1rem;
+}
+
+#modal label + input {
+  margin-top: 0.5rem;
 }
 
 button {

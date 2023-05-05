@@ -47,6 +47,7 @@ function createCard() {
 
   for (book of myLibrary) {
     const card = document.createElement('div');
+    card.classList.add('border-2')
     mainDiv.appendChild(card);
     card.innerHTML = '<h2>' + book.title + '</h2>' + '<p>' + book.author + '</p>' + '<p>' + book.year + '</p>';
   }
