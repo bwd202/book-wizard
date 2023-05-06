@@ -24,6 +24,11 @@ window.onclick = function (e) {
   }
 };
 
+const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListener('click', () => {
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+});
+
 const modalObj = {
   title: document.querySelector('#title'),
   author: document.querySelector('#author'),
