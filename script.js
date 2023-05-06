@@ -37,7 +37,7 @@ const modalObj = {
     function createCard() {
       const main = document.querySelector('#main');
       const card = document.createElement('div');
-      card.classList.add('border-2', 'flex', 'flex-col');
+      card.classList.add('border-2', 'flex', 'flex-col', 'justify-around', 'items-center' ,'p-4');
       main.appendChild(card);
       // card content
       const bookTitle = document.createElement('h2');
@@ -54,12 +54,6 @@ const modalObj = {
       bookRead.classList.add('accent-gray-400')
       bookRead.checked = true
       card.appendChild(bookRead);
-
-
-
-
-
-      // card.innerHTML = '<h2 class="text-red-500">' + newBook.title + '</h2>' + '<p>' + newBook.author + '</p>' + '<p>' + newBook.year + '</p>';
     }
     return createCard();
   },
