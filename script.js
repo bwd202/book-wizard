@@ -33,22 +33,38 @@ const modalObj = {
     e.preventDefault();
     const newBook = new Book(title.value, author.value, year.value, read.value);
     myLibrary.push(newBook);
-    createCard();
+    // createCard();
+    function createCard() {
+      const main = document.querySelector('#main');
+      const card = document.createElement('div');
+      card.classList.add('border-2', 'flex', 'flex-col');
+      main.appendChild(card);
+      // card content
+      const bookTitle = document.createElement('h2');
+      bookTitle.textContent = `${newBook.title}`;
+      card.appendChild(bookTitle);
+      const bookAuthor = document.createElement('p');
+      bookAuthor.textContent = `${newBook.author}`;
+      card.appendChild(bookAuthor);
+      const bookYear = document.createElement('p');
+      bookYear.textContent = `${newBook.year}`
+      card.appendChild(bookYear);
+      const bookRead = document.createElement('input');
+      bookRead.setAttribute('type','checkbox')
+      bookRead.classList.add('accent-gray-400')
+      bookRead.checked = true
+      card.appendChild(bookRead);
+
+
+
+
+
+      // card.innerHTML = '<h2 class="text-red-500">' + newBook.title + '</h2>' + '<p>' + newBook.author + '</p>' + '<p>' + newBook.year + '</p>';
+    }
+    return createCard();
   },
 };
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
   .addEventListener('click', modalObj.addBook);
-
-// Card
-function createCard() {
-  const mainDiv = document.querySelector('#main');
-
-  for (book of myLibrary) {
-    const card = document.createElement('div');
-    card.classList.add('border-2')
-    mainDiv.appendChild(card);
-    card.innerHTML = '<h2>' + book.title + '</h2>' + '<p>' + book.author + '</p>' + '<p>' + book.year + '</p>';
-  }
-}
