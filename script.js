@@ -42,9 +42,13 @@ const modalObj = {
     function createCard() {
       const main = document.querySelector('#main');
       const card = document.createElement('div');
-      card.classList.add('border-2', 'flex', 'flex-col', 'justify-around', 'items-center' ,'p-4');
+      card.classList.add('border-2', 'flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg');
       main.appendChild(card);
       // card content
+      const cardCloseBtn = document.createElement('button')
+      cardCloseBtn.classList.add('self-end')
+      cardCloseBtn.innerHTML = '&times;'
+      card.appendChild(cardCloseBtn)
       const bookTitle = document.createElement('h2');
       bookTitle.textContent = `${newBook.title}`;
       card.appendChild(bookTitle);

@@ -604,6 +604,10 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-around {
   justify-content: space-around;
 }
@@ -614,6 +618,10 @@ video {
 
 .self-end {
   align-self: flex-end;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border {
