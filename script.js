@@ -34,6 +34,9 @@ const modalObj = {
   author: document.querySelector('#author'),
   year: document.querySelector('#year'),
   read: document.querySelector('#read'),
+  removeBook() {
+    // 
+  },
   addBook: function (e) {
     e.preventDefault();
     const newBook = new Book(title.value, author.value, year.value, read.value);
@@ -44,11 +47,12 @@ const modalObj = {
       const card = document.createElement('div');
       card.classList.add('border-2', 'flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg');
       main.appendChild(card);
-      // card content
-      const cardCloseBtn = document.createElement('button')
-      cardCloseBtn.classList.add('self-end')
-      cardCloseBtn.innerHTML = '&times;'
-      card.appendChild(cardCloseBtn)
+      // card body
+      const removeBookBtn = document.createElement('button')
+      removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
+      removeBookBtn.innerHTML = '&times;'
+      removeBookBtn.addEventListener('click', modalObj.removeBook)
+      card.appendChild(removeBookBtn)
       const bookTitle = document.createElement('h2');
       bookTitle.textContent = `${newBook.title}`;
       card.appendChild(bookTitle);
@@ -71,3 +75,12 @@ const modalObj = {
 const addBookBtn = document
   .querySelector('#add-book-btn')
   .addEventListener('click', modalObj.addBook);
+
+
+//   document.querySelectorAll('.remove-book-btn').forEach((btn) => {
+//   btn.addEventListener('click', removeBook);
+// });
+
+// function removeBook() {
+//   console.log('hello')
+// }
