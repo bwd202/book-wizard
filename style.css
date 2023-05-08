@@ -721,6 +721,15 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .accent-gray-400 {
   accent-color: #9ca3af;
 }

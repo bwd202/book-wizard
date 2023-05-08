@@ -55,6 +55,7 @@ const modalObj = {
       }))
       card.appendChild(removeBookBtn)
       const bookTitle = document.createElement('h2');
+      bookTitle.classList.add('font-bold','text-lg')
       bookTitle.textContent = `${newBook.title}`;
       card.appendChild(bookTitle);
       const bookAuthor = document.createElement('p');
