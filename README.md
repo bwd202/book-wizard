@@ -1,2 +1,3 @@
+# book-wizard
 
-# wizard-library
+A simple utility to add/remove books from a library.
