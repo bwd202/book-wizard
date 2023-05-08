@@ -42,7 +42,7 @@ const modalObj = {
     function createCard() {
       const main = document.querySelector('#main');
       const card = document.createElement('div');
-      card.classList.add('border','border-black','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
+      card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
       card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
       main.appendChild(card);
       // card elements
