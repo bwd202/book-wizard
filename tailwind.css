@@ -15,10 +15,23 @@
   border-radius: 0.5rem;
 }
 
+#modal input:last-of-type {
+  width: max-content;
+  transform: scale(1.5);
+  margin-left: 6px;
+}
+
+#modal label {
+  margin-top: 1rem;
+}
+
+#modal label + input {
+  margin-top: 0.5rem;
+}
+
 button {
   display: block;
   border-radius: 0.5rem;
-  border-width: 2px;
 }
 
 body {
@@ -26,6 +39,7 @@ body {
 }
 
 #main {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 20%));
   grid-auto-rows: 200px;
+  gap: 10px;
 }

@@ -9,12 +9,12 @@
     <script src="script.js" defer></script>
   </head>
   <body class="grid w-screen h-screen relative">
-    <div id="header" class="bg-gray-400 z-0 p-10 flex justify-center">
+    <div id="header" class="bg-gray-400 z-0 p-10 flex justify-center shadow-md">
       <button id="modal-toggle-btn" class="bg-gray-100 px-6">
         Add new book
       </button>
     </div>
-    <div id="main" class="z-0"></div>
+    <div id="main" class="grid p-7 z-0"></div>
     <!-- Modal -->
     <div
       id="modal"
@@ -22,10 +22,11 @@
     >
       <div
         id="modal-content"
-        class="flex flex-col w-1/2 border bg-slate-950 bg-opacity-60"
+        class="flex flex-col w-1/2 border bg-slate-950 bg-opacity-60 p-4 gap-4"
       >
+        <button id="modal-close-btn" class="self-end scale-150">&times;</button>
         <h1>Add new book</h1>
-        <form action="/" class="flex flex-col py-3">
+        <form action="/" class="flex flex-col">
           <label for="title">Title</label>
           <input type="text" id="title" />
           <label for="author">Author</label>
@@ -33,8 +34,21 @@
           <label for="year">Year</label>
           <input type="text" id="year" />
           <label for="read">Read</label>
-          <input type="checkbox" id="read" />
-          <button id="add-book-btn">Add book</button>
+          <input type="checkbox" id="read" class="accent-green-600" />
+          <div id="form-buttons" class="flex justify-center gap-4 mt-8">
+            <button
+              id="add-book-btn"
+              class="bg-green-600 hover:bg-green-700 flex-1 py-1"
+            >
+              Add book
+            </button>
+            <button
+              id="reset-modal-btn"
+              class="bg-orange-600 hover:bg-orange-700 flex-1"
+            >
+              Reset
+            </button>
+          </div>
         </form>
       </div>
     </div>
