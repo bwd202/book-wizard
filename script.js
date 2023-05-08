@@ -45,7 +45,7 @@ const modalObj = {
       card.classList.add('border-2', 'flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg');
       card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
       main.appendChild(card);
-      // card body
+      // card elements
       const removeBookBtn = document.createElement('button')
       removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
       removeBookBtn.innerHTML = '&times;'
@@ -76,12 +76,3 @@ const modalObj = {
 const addBookBtn = document
   .querySelector('#add-book-btn')
   .addEventListener('click', modalObj.addBook);
-
-
-//   document.querySelectorAll('.remove-book-btn').forEach((btn) => {
-//   btn.addEventListener('click', removeBook);
-// });
-
-// function removeBook() {
-//   console.log('hello')
-// }
