@@ -714,6 +714,10 @@ video {
   accent-color: #ea580c;
 }
 
+.accent-green-600 {
+  accent-color: #16a34a;
+}
+
 #modal {
   color: white;
 }

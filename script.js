@@ -66,7 +66,7 @@ const modalObj = {
       const bookRead = document.createElement('input');
       bookRead.setAttribute('type','checkbox')
       bookRead.classList.add('accent-gray-400')
-      bookRead.checked = true
+      if(read.checked) bookRead.checked = true;
       card.appendChild(bookRead);
     }
     return createCard();
