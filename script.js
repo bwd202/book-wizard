@@ -76,3 +76,11 @@ const modalObj = {
 const addBookBtn = document
   .querySelector('#add-book-btn')
   .addEventListener('click', modalObj.addBook);
+
+const resetModal = document.querySelector('#reset-modal-btn').addEventListener('click', (e)=> {
+  e.preventDefault()
+  document.querySelectorAll('#modal-content input').forEach((input)=> {
+    input.value = ''
+  })
+
+})
