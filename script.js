@@ -36,7 +36,7 @@ const modalObj = {
   read: document.querySelector('#read'),
   addBook: function (e) {
     e.preventDefault();
-    const newBook = new Book(title.value, author.value, year.value, read.value);
+    const newBook = new Book(title.value, author.value, year.value, read.checked);
     myLibrary.push(newBook);
     // createCard();
     function createCard() {
