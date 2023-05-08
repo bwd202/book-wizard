@@ -38,7 +38,7 @@ const modalObj = {
     e.preventDefault();
     const newBook = new Book(title.value, author.value, year.value, read.checked);
     myLibrary.push(newBook);
-    // createCard();
+    // createCard fn
     function createCard() {
       const main = document.querySelector('#main');
       const card = document.createElement('div');
@@ -68,6 +68,10 @@ const modalObj = {
       bookRead.classList.add('accent-gray-400')
       if(read.checked) bookRead.checked = true;
       card.appendChild(bookRead);
+      bookRead.addEventListener('change', ()=> {
+        if(bookRead.checked) newBook.read = true;
+        else if (!bookRead.checked) newBook.read = false;
+      })
     }
     return createCard();
   },
@@ -82,5 +86,4 @@ const resetModal = document.querySelector('#reset-modal-btn').addEventListener('
   document.querySelectorAll('#modal-content input').forEach((input)=> {
     input.value = ''
   })
-
 })
