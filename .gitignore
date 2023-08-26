@@ -1,3 +1,4 @@
 *.json
 tailwind.config.js
 tailwind.css
+*.txt
