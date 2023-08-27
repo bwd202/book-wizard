@@ -1,4 +1,4 @@
 *.json
 tailwind.config.js
 tailwind.css
-*.txt
+todo.md
