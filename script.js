@@ -1,10 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, year, read) {
+class Book {
+  constructor(title, author, year, read) {
+
     this.title = title
     this.author = author
     this.year = year
     this.read = read
+  }
 }
 
 // Modal
