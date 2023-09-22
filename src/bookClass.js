@@ -1,7 +1,8 @@
+export {Book}
 
 class Book {
-
-    constructor({title = 'title', author = 'author', year = 1970, read = false}) {
+    // using destructuring and default option (equals empty object)
+    constructor({title = 'title', author = 'author', year = 1970, read = false} = {}) {
   
       this.title = title
       this.author = author

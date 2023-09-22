@@ -1,5 +1,9 @@
 import './style.css'
-import {Book} from './book'
+import {Book} from './bookClass'
+
+let script = document.head.getElementsByTagName('script')[0]
+
+script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
