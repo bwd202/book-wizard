@@ -8,7 +8,7 @@ module.exports = {
         new HtmlWebpackPlugin({
     
           title: 'Book Wizard',
-    
+          template: 'src/index.html'
         }),
     
       ],

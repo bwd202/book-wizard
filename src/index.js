@@ -1,31 +1,9 @@
 import './style.css'
+import {Book} from './book'
 
 const myLibrary = [];
 
-class Book {
-  constructor(title, author, year, read) {
-
-    this.title = title
-    this.author = author
-    this.year = year
-    this.read = read
-  }
-
-  get book() {
-    return this
-  }
-
-  addBook(e) {
-    e.preventDefault();
-    let newBook = this.book()
-    myLibrary.push(newBook)
-    this._index = myLibrary.indexOf(newBook)
-  }
-
-  // getBookIndex() {
-  //   return 
-  // }
-}
+let test = new Book()
 
 // Modal
 const modal = document.getElementById('modal');
