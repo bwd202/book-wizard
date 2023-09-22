@@ -5,6 +5,8 @@ const myLibrary = [];
 
 let test = new Book()
 
+console.log(test)
+
 // Modal
 const modal = document.getElementById('modal');
 
