@@ -10,7 +10,7 @@ const myLibrary = [];
 
 let test = new Book({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
 
-console.log(test)
+createCard(test)
 
 // Modal
 const modal = document.getElementById('modal');
