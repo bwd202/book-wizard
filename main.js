@@ -1489,7 +1489,7 @@ const myLibrary = [];
 
 let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
 
-console.log(test)
+;(0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)(test)
 
 // Modal
 const modal = document.getElementById('modal');
