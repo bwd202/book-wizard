@@ -1361,21 +1361,15 @@ function createCard(bookObj) {
   
     const bookTitle = document.createElement('h2');
     bookTitle.classList.add('font-bold','text-lg')
-    // bookTitle.textContent = `${title}`;
     bookTitle.textContent = bookObj.title
-  
     card.appendChild(bookTitle);
   
     const bookAuthor = document.createElement('p');
-    // bookAuthor.textContent = `${author}`;
     bookAuthor.textContent = bookObj.author
-  
     card.appendChild(bookAuthor);
   
     const bookYear = document.createElement('p');
-    // bookYear.textContent = `${year}`
     bookYear.textContent = bookObj.year
-  
     card.appendChild(bookYear);
   
     const bookRead = document.createElement('input');
@@ -1383,7 +1377,6 @@ function createCard(bookObj) {
     bookRead.classList.add('accent-gray-400')
   
     if(bookObj.read) bookRead.checked = true;
-  
     card.appendChild(bookRead);
     
     // bookRead.addEventListener('change', ()=> {
@@ -1414,10 +1407,10 @@ __webpack_require__.r(__webpack_exports__);
 function getBook() {
 
     // modal fields
-    title = document.querySelector('#title').value
-    author = document.querySelector('#author').value
-    year = document.querySelector('#year').value
-    read = document.querySelector('#read').checked
+   let title = document.querySelector('#title').value
+   let author = document.querySelector('#author').value
+   let year = document.querySelector('#year').value
+   let read = document.querySelector('#read').checked
 
     return new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
 }
