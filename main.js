@@ -1306,16 +1306,16 @@ class Book {
       this.read = read
     }
   
-    get book() {
-      return this
-    }
+    // get book() {
+    //   return this
+    // }
   
-    addBook(e) {
-      e.preventDefault();
-      let newBook = this.book()
-      myLibrary.push(newBook)
-      this._index = myLibrary.indexOf(newBook)
-    }
+    // addBook(e) {
+    //   e.preventDefault();
+    //   let newBook = this.book()
+    //   myLibrary.push(newBook)
+    //   this._index = myLibrary.indexOf(newBook)
+    // }
   
     // getBookIndex() {
     //   return 
@@ -1349,7 +1349,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
   
     main.append(card);
   
-    // card UI elements
+    // GUI
     const removeBookBtn = document.createElement('button')
     removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
     removeBookBtn.innerHTML = '&times;'
@@ -1380,7 +1380,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
     bookRead.setAttribute('type','checkbox')
     bookRead.classList.add('accent-gray-400')
   
-    // if(read.checked) bookRead.checked = true;
+    if(read) bookRead.checked = true;
   
     card.appendChild(bookRead);
     
@@ -1409,10 +1409,10 @@ __webpack_require__.r(__webpack_exports__);
 // gets book info from modal fields
 function getBook() {
 
-    let title = document.querySelector('#title')
-    let author = document.querySelector('#author')
-    let year = document.querySelector('#year')
-    let read = document.querySelector('#read')
+    let title = document.querySelector('#title').value
+    let author = document.querySelector('#author').value
+    let year = document.querySelector('#year').value
+    let read = document.querySelector('#read').checked
     
     return {title, author, year, read}
 }
@@ -1514,7 +1514,7 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
+let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book((0,_getBook__WEBPACK_IMPORTED_MODULE_3__.getBook)())
 
 ;(0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)(test)
 
@@ -1540,22 +1540,30 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
     modal.classList.add('hidden');
 });
 
-const modalObj = {
+// const modalObj = {
 
-  // title: document.querySelector('#title'),
-  // author: document.querySelector('#author'),
-  // year: document.querySelector('#year'),
-  // read: document.querySelector('#read'),
+//   // title: document.querySelector('#title'),
+//   // author: document.querySelector('#author'),
+//   // year: document.querySelector('#year'),
+//   // read: document.querySelector('#read'),
   
-  addBook: function (e) {
-    // e.preventDefault();
-    const newBook = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book(title.value, author.value, year.value, read.checked);
-  },
-};
+//   addBook: function (e) {
+//     // e.preventDefault();
+//     const newBook = new Book(title.value, author.value, year.value, read.checked);
+//   },
+// };
+
+function displayNewBook(e) {
+  
+  e.preventDefault()
+
+  document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_3__.getBook)()))
+
+}
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
-  .addEventListener('click', modalObj.addBook);
+  .addEventListener('click', displayNewBook);
 
 const resetModal = document.querySelector('#reset-modal-btn').addEventListener('click', (e)=> {
   e.preventDefault()
