@@ -1283,6 +1283,47 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/bookClass.js":
+/*!**************************!*\
+  !*** ./src/bookClass.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Book: () => (/* binding */ Book)
+/* harmony export */ });
+
+
+class Book {
+
+    // using destructuring and default option (i.e. empty object)
+    constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+  
+      this.title = title
+      this.author = author
+      this.year = year
+      this.read = read
+    }
+  
+    get book() {
+      return this
+    }
+  
+    addBook(e) {
+      e.preventDefault();
+      let newBook = this.book()
+      myLibrary.push(newBook)
+      this._index = myLibrary.indexOf(newBook)
+    }
+  
+    // getBookIndex() {
+    //   return 
+    // }
+  }
+
+/***/ }),
+
 /***/ "./src/createCard.js":
 /*!***************************!*\
   !*** ./src/createCard.js ***!
@@ -1434,7 +1475,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
 /* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
 
 
@@ -1446,7 +1487,7 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
+let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
 
 console.log(test)
 
@@ -1481,7 +1522,7 @@ const modalObj = {
   read: document.querySelector('#read'),
   addBook: function (e) {
     // e.preventDefault();
-    const newBook = new Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(title.value, author.value, year.value, read.checked);
+    const newBook = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book(title.value, author.value, year.value, read.checked);
     newBook.addToLib(e)
     // myLibrary.push(newBook);
     // createCard fn
@@ -1520,7 +1561,7 @@ const modalObj = {
     //     else if (!bookRead.checked) newBook.read = false;
     //   })
     // }
-    return createCard();
+    return (0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)();
   },
 };
 
