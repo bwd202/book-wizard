@@ -1,6 +1,6 @@
 export {createCard}
 
-function createCard({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+function createCard(bookObj) {
 
     let wrapper = new DocumentFragment()
   
@@ -26,17 +26,20 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
   
     const bookTitle = document.createElement('h2');
     bookTitle.classList.add('font-bold','text-lg')
-    bookTitle.textContent = `${title}`;
+    // bookTitle.textContent = `${title}`;
+    bookTitle.textContent = bookObj.title
   
     card.appendChild(bookTitle);
   
     const bookAuthor = document.createElement('p');
-    bookAuthor.textContent = `${author}`;
+    // bookAuthor.textContent = `${author}`;
+    bookAuthor.textContent = bookObj.author
   
     card.appendChild(bookAuthor);
   
     const bookYear = document.createElement('p');
-    bookYear.textContent = `${year}`
+    // bookYear.textContent = `${year}`
+    bookYear.textContent = bookObj.year
   
     card.appendChild(bookYear);
   
@@ -44,7 +47,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
     bookRead.setAttribute('type','checkbox')
     bookRead.classList.add('accent-gray-400')
   
-    if(read) bookRead.checked = true;
+    if(bookObj.read) bookRead.checked = true;
   
     card.appendChild(bookRead);
     

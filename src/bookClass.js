@@ -2,7 +2,6 @@ export {Book}
 
 class Book {
 
-    // using destructuring and default option (i.e. empty object)
     constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
   
       this.title = title

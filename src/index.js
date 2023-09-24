@@ -1,5 +1,4 @@
 import './style.css'
-import {Book} from './bookClass'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
 
@@ -9,9 +8,9 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new Book(getBook())
+// let test = new Book(getBook())
 
-createCard(test)
+// createCard(test)
 
 // MODAL
 const modal = document.getElementById('modal');
@@ -33,20 +32,7 @@ window.onclick = function (e) {
 const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListener('click', () => {
     modal.classList.remove('flex');
     modal.classList.add('hidden');
-});
-
-// const modalObj = {
-
-//   // title: document.querySelector('#title'),
-//   // author: document.querySelector('#author'),
-//   // year: document.querySelector('#year'),
-//   // read: document.querySelector('#read'),
-  
-//   addBook: function (e) {
-//     // e.preventDefault();
-//     const newBook = new Book(title.value, author.value, year.value, read.checked);
-//   },
-// };
+})
 
 function displayNewBook(e) {
   
@@ -55,6 +41,11 @@ function displayNewBook(e) {
   document.querySelector('#main').append(createCard(getBook()))
 
 }
+
+// function pushBookToArr(arr) {
+
+//   arr.push()
+// }
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
