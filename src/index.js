@@ -1,6 +1,7 @@
 import './style.css'
 import {Book} from './bookClass'
 import { createCard } from './createCard'
+import { getBook } from './getBook'
 
 let script = document.head.getElementsByTagName('script')[0]
 
@@ -34,55 +35,16 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
     modal.classList.add('hidden');
 });
 
-
-
 const modalObj = {
-  title: document.querySelector('#title'),
-  author: document.querySelector('#author'),
-  year: document.querySelector('#year'),
-  read: document.querySelector('#read'),
+
+  // title: document.querySelector('#title'),
+  // author: document.querySelector('#author'),
+  // year: document.querySelector('#year'),
+  // read: document.querySelector('#read'),
+  
   addBook: function (e) {
     // e.preventDefault();
     const newBook = new Book(title.value, author.value, year.value, read.checked);
-    newBook.addToLib(e)
-    // myLibrary.push(newBook);
-    // createCard fn
-    // function createCard() {
-    //   const main = document.querySelector('#main');
-    //   const card = document.createElement('div');
-    //   card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
-    //   card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-    //   main.appendChild(card);
-    //   // card elements
-    //   const removeBookBtn = document.createElement('button')
-    //   removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
-    //   removeBookBtn.innerHTML = '&times;'
-    //   removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-    //   removeBookBtn.addEventListener('click', (()=> {
-    //     card.remove()
-    //   }))
-    //   card.appendChild(removeBookBtn)
-    //   const bookTitle = document.createElement('h2');
-    //   bookTitle.classList.add('font-bold','text-lg')
-    //   bookTitle.textContent = `${newBook.title}`;
-    //   card.appendChild(bookTitle);
-    //   const bookAuthor = document.createElement('p');
-    //   bookAuthor.textContent = `${newBook.author}`;
-    //   card.appendChild(bookAuthor);
-    //   const bookYear = document.createElement('p');
-    //   bookYear.textContent = `${newBook.year}`
-    //   card.appendChild(bookYear);
-    //   const bookRead = document.createElement('input');
-    //   bookRead.setAttribute('type','checkbox')
-    //   bookRead.classList.add('accent-gray-400')
-    //   if(read.checked) bookRead.checked = true;
-    //   card.appendChild(bookRead);
-    //   bookRead.addEventListener('change', ()=> {
-    //     if(bookRead.checked) newBook.read = true;
-    //     else if (!bookRead.checked) newBook.read = false;
-    //   })
-    // }
-    // return createCard();
   },
 };
 
