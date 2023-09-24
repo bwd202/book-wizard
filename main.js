@@ -1297,7 +1297,6 @@ __webpack_require__.r(__webpack_exports__);
 
 class Book {
 
-    // using destructuring and default option (i.e. empty object)
     constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
   
       this.title = title
@@ -1336,7 +1335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 
 
-function createCard({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+function createCard(bookObj) {
 
     let wrapper = new DocumentFragment()
   
@@ -1362,17 +1361,20 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
   
     const bookTitle = document.createElement('h2');
     bookTitle.classList.add('font-bold','text-lg')
-    bookTitle.textContent = `${title}`;
+    // bookTitle.textContent = `${title}`;
+    bookTitle.textContent = bookObj.title
   
     card.appendChild(bookTitle);
   
     const bookAuthor = document.createElement('p');
-    bookAuthor.textContent = `${author}`;
+    // bookAuthor.textContent = `${author}`;
+    bookAuthor.textContent = bookObj.author
   
     card.appendChild(bookAuthor);
   
     const bookYear = document.createElement('p');
-    bookYear.textContent = `${year}`
+    // bookYear.textContent = `${year}`
+    bookYear.textContent = bookObj.year
   
     card.appendChild(bookYear);
   
@@ -1380,7 +1382,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
     bookRead.setAttribute('type','checkbox')
     bookRead.classList.add('accent-gray-400')
   
-    if(read) bookRead.checked = true;
+    if(bookObj.read) bookRead.checked = true;
   
     card.appendChild(bookRead);
     
@@ -1404,17 +1406,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getBook: () => (/* binding */ getBook)
 /* harmony export */ });
+/* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
 
+;
 
-// gets book info from modal fields
+// gets book info from modal and returns new book obj
 function getBook() {
 
-    let title = document.querySelector('#title').value
-    let author = document.querySelector('#author').value
-    let year = document.querySelector('#year').value
-    let read = document.querySelector('#read').checked
-    
-    return {title, author, year, read}
+    // modal fields
+    title = document.querySelector('#title').value
+    author = document.querySelector('#author').value
+    year = document.querySelector('#year').value
+    read = document.querySelector('#read').checked
+
+    return new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
 }
 
 /***/ })
@@ -1500,10 +1505,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
-/* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
-/* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
-
+/* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
+/* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
 
 
 
@@ -1514,9 +1517,9 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book((0,_getBook__WEBPACK_IMPORTED_MODULE_3__.getBook)())
+// let test = new Book(getBook())
 
-;(0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)(test)
+// createCard(test)
 
 // MODAL
 const modal = document.getElementById('modal');
@@ -1538,28 +1541,20 @@ window.onclick = function (e) {
 const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListener('click', () => {
     modal.classList.remove('flex');
     modal.classList.add('hidden');
-});
-
-// const modalObj = {
-
-//   // title: document.querySelector('#title'),
-//   // author: document.querySelector('#author'),
-//   // year: document.querySelector('#year'),
-//   // read: document.querySelector('#read'),
-  
-//   addBook: function (e) {
-//     // e.preventDefault();
-//     const newBook = new Book(title.value, author.value, year.value, read.checked);
-//   },
-// };
+})
 
 function displayNewBook(e) {
   
   e.preventDefault()
 
-  document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_3__.getBook)()))
+  document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
 
 }
+
+// function pushBookToArr(arr) {
+
+//   arr.push()
+// }
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
