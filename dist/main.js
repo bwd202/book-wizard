@@ -1491,7 +1491,7 @@ let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book({title:'doctor zhiva
 
 ;(0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)(test)
 
-// Modal
+// MODAL
 const modal = document.getElementById('modal');
 
 const modalBtn = document
@@ -1561,7 +1561,7 @@ const modalObj = {
     //     else if (!bookRead.checked) newBook.read = false;
     //   })
     // }
-    return (0,_createCard__WEBPACK_IMPORTED_MODULE_2__.createCard)();
+    // return createCard();
   },
 };
 

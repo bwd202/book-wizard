@@ -12,7 +12,7 @@ let test = new Book({title:'doctor zhivago', author:"boris pasternak", year: 197
 
 createCard(test)
 
-// Modal
+// MODAL
 const modal = document.getElementById('modal');
 
 const modalBtn = document
@@ -82,7 +82,7 @@ const modalObj = {
     //     else if (!bookRead.checked) newBook.read = false;
     //   })
     // }
-    return createCard();
+    // return createCard();
   },
 };
 
