@@ -26,21 +26,15 @@ function createCard(bookObj) {
   
     const bookTitle = document.createElement('h2');
     bookTitle.classList.add('font-bold','text-lg')
-    // bookTitle.textContent = `${title}`;
     bookTitle.textContent = bookObj.title
-  
     card.appendChild(bookTitle);
   
     const bookAuthor = document.createElement('p');
-    // bookAuthor.textContent = `${author}`;
     bookAuthor.textContent = bookObj.author
-  
     card.appendChild(bookAuthor);
   
     const bookYear = document.createElement('p');
-    // bookYear.textContent = `${year}`
     bookYear.textContent = bookObj.year
-  
     card.appendChild(bookYear);
   
     const bookRead = document.createElement('input');
@@ -48,7 +42,6 @@ function createCard(bookObj) {
     bookRead.classList.add('accent-gray-400')
   
     if(bookObj.read) bookRead.checked = true;
-  
     card.appendChild(bookRead);
     
     // bookRead.addEventListener('change', ()=> {
