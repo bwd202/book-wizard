@@ -1305,11 +1305,6 @@ class Book {
       this.read = read
     }
 
-    addToLibrary(arr) {
-
-      arr.push(this)
-    }
-  
   }
 
 /***/ }),
@@ -1430,6 +1425,7 @@ function getBook() {
 
     return book
 }
+
 
 /***/ })
 
