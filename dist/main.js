@@ -1304,21 +1304,12 @@ class Book {
       this.year = year
       this.read = read
     }
+
+    addToLibrary(arr) {
+
+      arr.push(this)
+    }
   
-    // get book() {
-    //   return this
-    // }
-  
-    // addBook(e) {
-    //   e.preventDefault();
-    //   let newBook = this.book()
-    //   myLibrary.push(newBook)
-    //   this._index = myLibrary.indexOf(newBook)
-    // }
-  
-    // getBookIndex() {
-    //   return 
-    // }
   }
 
 /***/ }),
