@@ -1283,42 +1283,72 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/bookClass.js":
-/*!**************************!*\
-  !*** ./src/bookClass.js ***!
-  \**************************/
+/***/ "./src/createCard.js":
+/*!***************************!*\
+  !*** ./src/createCard.js ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Book: () => (/* binding */ Book)
+/* harmony export */   createCard: () => (/* binding */ createCard)
 /* harmony export */ });
 
 
-class Book {
-    // using destructuring and default option (equals empty object)
-    constructor({title = 'title', author = 'author', year = 1970, read = false} = {}) {
+function createCard({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+
+    let wrapper = new DocumentFragment()
   
-      this.title = title
-      this.author = author
-      this.year = year
-      this.read = read
-    }
+    const main = document.querySelector('#main');
+    const card = document.createElement('div');
   
-    get book() {
-      return this
-    }
+    card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
   
-    addBook(e) {
-      e.preventDefault();
-      let newBook = this.book()
-      myLibrary.push(newBook)
-      this._index = myLibrary.indexOf(newBook)
-    }
+    // card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
   
-    // getBookIndex() {
-    //   return 
-    // }
+    main.append(card);
+  
+    // card UI elements
+    const removeBookBtn = document.createElement('button')
+    removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
+    removeBookBtn.innerHTML = '&times;'
+  
+    // removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
+    removeBookBtn.addEventListener('click', (()=> {
+      card.remove()
+    }))
+    card.appendChild(removeBookBtn)
+  
+    const bookTitle = document.createElement('h2');
+    bookTitle.classList.add('font-bold','text-lg')
+    bookTitle.textContent = `${title}`;
+  
+    card.appendChild(bookTitle);
+  
+    const bookAuthor = document.createElement('p');
+    bookAuthor.textContent = `${author}`;
+  
+    card.appendChild(bookAuthor);
+  
+    const bookYear = document.createElement('p');
+    bookYear.textContent = `${year}`
+  
+    card.appendChild(bookYear);
+  
+    const bookRead = document.createElement('input');
+    bookRead.setAttribute('type','checkbox')
+    bookRead.classList.add('accent-gray-400')
+  
+    // if(read.checked) bookRead.checked = true;
+  
+    card.appendChild(bookRead);
+    
+    // bookRead.addEventListener('change', ()=> {
+    //   if(bookRead.checked) newBook.read = true;
+    //   else if (!bookRead.checked) newBook.read = false;
+    // })
+  
+    return wrapper
   }
 
 /***/ })
@@ -1404,7 +1434,9 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
+
 
 
 
@@ -1414,7 +1446,7 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book()
+let test = new Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
 
 console.log(test)
 
@@ -1440,62 +1472,7 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
     modal.classList.add('hidden');
 });
 
-function createCard() {
 
-  let wrapper = new DocumentFragment()
-
-  const main = document.querySelector('#main');
-  const card = document.createElement('div');
-
-  card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
-
-  // card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-
-  main.append(card);
-
-  // card UI elements
-  const removeBookBtn = document.createElement('button')
-
-  removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
-  removeBookBtn.innerHTML = '&times;'
-
-  // removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-  removeBookBtn.addEventListener('click', (()=> {
-    card.remove()
-  }))
-  card.appendChild(removeBookBtn)
-
-  const bookTitle = document.createElement('h2');
-  bookTitle.classList.add('font-bold','text-lg')
-  bookTitle.textContent = `${newBook.title}`;
-
-  card.appendChild(bookTitle);
-
-  const bookAuthor = document.createElement('p');
-  bookAuthor.textContent = `${newBook.author}`;
-
-  card.appendChild(bookAuthor);
-
-  const bookYear = document.createElement('p');
-  bookYear.textContent = `${newBook.year}`
-
-  card.appendChild(bookYear);
-
-  const bookRead = document.createElement('input');
-  bookRead.setAttribute('type','checkbox')
-  bookRead.classList.add('accent-gray-400')
-
-  if(read.checked) bookRead.checked = true;
-
-  card.appendChild(bookRead);
-  
-  bookRead.addEventListener('change', ()=> {
-    if(bookRead.checked) newBook.read = true;
-    else if (!bookRead.checked) newBook.read = false;
-  })
-
-  return wrapper
-}
 
 const modalObj = {
   title: document.querySelector('#title'),
@@ -1504,7 +1481,7 @@ const modalObj = {
   read: document.querySelector('#read'),
   addBook: function (e) {
     // e.preventDefault();
-    const newBook = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book(title.value, author.value, year.value, read.checked);
+    const newBook = new Object(function webpackMissingModule() { var e = new Error("Cannot find module './bookClass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(title.value, author.value, year.value, read.checked);
     newBook.addToLib(e)
     // myLibrary.push(newBook);
     // createCard fn
