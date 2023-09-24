@@ -11,16 +11,16 @@ class Book {
       this.read = read
     }
   
-    get book() {
-      return this
-    }
+    // get book() {
+    //   return this
+    // }
   
-    addBook(e) {
-      e.preventDefault();
-      let newBook = this.book()
-      myLibrary.push(newBook)
-      this._index = myLibrary.indexOf(newBook)
-    }
+    // addBook(e) {
+    //   e.preventDefault();
+    //   let newBook = this.book()
+    //   myLibrary.push(newBook)
+    //   this._index = myLibrary.indexOf(newBook)
+    // }
   
     // getBookIndex() {
     //   return 

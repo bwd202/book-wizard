@@ -13,7 +13,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
   
     main.append(card);
   
-    // card UI elements
+    // GUI
     const removeBookBtn = document.createElement('button')
     removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
     removeBookBtn.innerHTML = '&times;'
@@ -44,7 +44,7 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
     bookRead.setAttribute('type','checkbox')
     bookRead.classList.add('accent-gray-400')
   
-    // if(read.checked) bookRead.checked = true;
+    if(read) bookRead.checked = true;
   
     card.appendChild(bookRead);
     

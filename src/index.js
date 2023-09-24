@@ -9,7 +9,7 @@ script.setAttribute('type', 'module')
 
 const myLibrary = [];
 
-let test = new Book({title:'doctor zhivago', author:"boris pasternak", year: 1970, read:true})
+let test = new Book(getBook())
 
 createCard(test)
 
@@ -35,22 +35,30 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
     modal.classList.add('hidden');
 });
 
-const modalObj = {
+// const modalObj = {
 
-  // title: document.querySelector('#title'),
-  // author: document.querySelector('#author'),
-  // year: document.querySelector('#year'),
-  // read: document.querySelector('#read'),
+//   // title: document.querySelector('#title'),
+//   // author: document.querySelector('#author'),
+//   // year: document.querySelector('#year'),
+//   // read: document.querySelector('#read'),
   
-  addBook: function (e) {
-    // e.preventDefault();
-    const newBook = new Book(title.value, author.value, year.value, read.checked);
-  },
-};
+//   addBook: function (e) {
+//     // e.preventDefault();
+//     const newBook = new Book(title.value, author.value, year.value, read.checked);
+//   },
+// };
+
+function displayNewBook(e) {
+  
+  e.preventDefault()
+
+  document.querySelector('#main').append(createCard(getBook()))
+
+}
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
-  .addEventListener('click', modalObj.addBook);
+  .addEventListener('click', displayNewBook);
 
 const resetModal = document.querySelector('#reset-modal-btn').addEventListener('click', (e)=> {
   e.preventDefault()
