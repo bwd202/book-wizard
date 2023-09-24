@@ -1293,19 +1293,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Book: () => (/* binding */ Book)
 /* harmony export */ });
+/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
 
+;
 
 class Book {
+    
+  constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
 
-    constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
-  
-      this.title = title
-      this.author = author
-      this.year = year
-      this.read = read
-    }
-
+    this.title = title
+    this.author = author
+    this.year = year
+    this.read = read
   }
+
+  // get book() {
+  //   return this
+  // }
+
+  // static {
+    
+  //   let newBook = new Book(newBook.book)
+  //   myLibrary.push(newBook)
+  //   console.log(myLibrary)
+  // }
+
+}
 
 /***/ }),
 
