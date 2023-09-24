@@ -1392,6 +1392,31 @@ function createCard({title = 'default', author = 'default', year = 1970, read = 
     return wrapper
   }
 
+/***/ }),
+
+/***/ "./src/getBook.js":
+/*!************************!*\
+  !*** ./src/getBook.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getBook: () => (/* binding */ getBook)
+/* harmony export */ });
+
+
+// gets book info from modal fields
+function getBook() {
+
+    let title = document.querySelector('#title')
+    let author = document.querySelector('#author')
+    let year = document.querySelector('#year')
+    let read = document.querySelector('#read')
+    
+    return {title, author, year, read}
+}
+
 /***/ })
 
 /******/ 	});
@@ -1477,6 +1502,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
 /* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
+/* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
+
 
 
 
@@ -1513,55 +1540,16 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
     modal.classList.add('hidden');
 });
 
-
-
 const modalObj = {
-  title: document.querySelector('#title'),
-  author: document.querySelector('#author'),
-  year: document.querySelector('#year'),
-  read: document.querySelector('#read'),
+
+  // title: document.querySelector('#title'),
+  // author: document.querySelector('#author'),
+  // year: document.querySelector('#year'),
+  // read: document.querySelector('#read'),
+  
   addBook: function (e) {
     // e.preventDefault();
     const newBook = new _bookClass__WEBPACK_IMPORTED_MODULE_1__.Book(title.value, author.value, year.value, read.checked);
-    newBook.addToLib(e)
-    // myLibrary.push(newBook);
-    // createCard fn
-    // function createCard() {
-    //   const main = document.querySelector('#main');
-    //   const card = document.createElement('div');
-    //   card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
-    //   card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-    //   main.appendChild(card);
-    //   // card elements
-    //   const removeBookBtn = document.createElement('button')
-    //   removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
-    //   removeBookBtn.innerHTML = '&times;'
-    //   removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
-    //   removeBookBtn.addEventListener('click', (()=> {
-    //     card.remove()
-    //   }))
-    //   card.appendChild(removeBookBtn)
-    //   const bookTitle = document.createElement('h2');
-    //   bookTitle.classList.add('font-bold','text-lg')
-    //   bookTitle.textContent = `${newBook.title}`;
-    //   card.appendChild(bookTitle);
-    //   const bookAuthor = document.createElement('p');
-    //   bookAuthor.textContent = `${newBook.author}`;
-    //   card.appendChild(bookAuthor);
-    //   const bookYear = document.createElement('p');
-    //   bookYear.textContent = `${newBook.year}`
-    //   card.appendChild(bookYear);
-    //   const bookRead = document.createElement('input');
-    //   bookRead.setAttribute('type','checkbox')
-    //   bookRead.classList.add('accent-gray-400')
-    //   if(read.checked) bookRead.checked = true;
-    //   card.appendChild(bookRead);
-    //   bookRead.addEventListener('change', ()=> {
-    //     if(bookRead.checked) newBook.read = true;
-    //     else if (!bookRead.checked) newBook.read = false;
-    //   })
-    // }
-    // return createCard();
   },
 };
 
