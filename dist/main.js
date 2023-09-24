@@ -1403,7 +1403,10 @@ function getBook() {
    let year = document.querySelector('#year').value
    let read = document.querySelector('#read').checked
 
-    return new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
+   let book = new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
+// myLibrary.push(book)
+
+    return book
 }
 
 /***/ })
