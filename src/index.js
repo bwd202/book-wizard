@@ -1,6 +1,6 @@
 import './style.css'
 import {Book} from './bookClass'
-import { makeBook } from './createCard'
+import { createCard } from './createCard'
 
 let script = document.head.getElementsByTagName('script')[0]
 
