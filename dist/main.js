@@ -1314,6 +1314,23 @@ class Book {
 
 /***/ }),
 
+/***/ "./src/bookStorage.js":
+/*!****************************!*\
+  !*** ./src/bookStorage.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   myLibrary: () => (/* binding */ myLibrary)
+/* harmony export */ });
+
+
+let myLibrary = [];
+
+
+/***/ }),
+
 /***/ "./src/createCard.js":
 /*!***************************!*\
   !*** ./src/createCard.js ***!
@@ -1391,20 +1408,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getBook: () => (/* binding */ getBook)
 /* harmony export */ });
 /* harmony import */ var _bookClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookClass */ "./src/bookClass.js");
+/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
 
 ;
 
+
 // gets book info from modal and returns new book obj
+// pushes book to library
 function getBook() {
 
     // modal fields
-   let title = document.querySelector('#title').value
-   let author = document.querySelector('#author').value
-   let year = document.querySelector('#year').value
-   let read = document.querySelector('#read').checked
+    let title = document.querySelector('#title').value
+    let author = document.querySelector('#author').value
+    let year = document.querySelector('#year').value
+    let read = document.querySelector('#read').checked
 
-   let book = new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
-// myLibrary.push(book)
+    let book = new _bookClass__WEBPACK_IMPORTED_MODULE_0__.Book({title, author, year, read})
+
+    _bookStorage__WEBPACK_IMPORTED_MODULE_1__.myLibrary.push(book)
+    console.log(_bookStorage__WEBPACK_IMPORTED_MODULE_1__.myLibrary)
 
     return book
 }
@@ -1494,6 +1516,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
 /* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
+/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
+
 
 
 
@@ -1501,8 +1525,6 @@ __webpack_require__.r(__webpack_exports__);
 let script = document.head.getElementsByTagName('script')[0]
 
 script.setAttribute('type', 'module')
-
-const myLibrary = [];
 
 // let test = new Book(getBook())
 
