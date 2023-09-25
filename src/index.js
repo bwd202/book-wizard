@@ -13,6 +13,7 @@ script.setAttribute('type', 'module')
 
 // MODAL
 const modal = document.getElementById('modal');
+modal.setAttribute('hidden', true)
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
