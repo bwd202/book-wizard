@@ -1,4 +1,5 @@
 import './style.css'
+// import './old_style.css'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
 import { myLibrary } from './bookStorage'
@@ -13,19 +14,21 @@ script.setAttribute('type', 'module')
 
 // MODAL
 const modal = document.getElementById('modal');
-modal.setAttribute('hidden', true)
+// modal.setAttribute('hidden', true)
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
   .addEventListener('click', () => {
-    modal.classList.toggle('hidden');
-    modal.classList.toggle('flex');
+    // modal.classList.toggle('hidden');
+    // modal.classList.toggle('flex');
+    modal.toggleAttribute('hidden')
   });
 
 window.onclick = function (e) {
   if (e.target === modal) {
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
+    // modal.classList.remove('flex');
+    // modal.classList.add('hidden');
+    modal.toggleAttribute('hidden')
   }
 };
 
