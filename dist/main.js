@@ -55,28 +55,23 @@ body {
 }
 
 #modal {
-    display: grid;
-    background: var(--softBlack);
     position: absolute;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    justify-content: space-between;
+    background: var(--softBlack);
+    min-height: 100vh;
     width: 100vw;
 }
 
 #modal-content {
     position: relative;
     display: grid;
-    grid-template-rows: 150px 1fr;
-    width: 700px;
-    justify-self: center;
+    grid-template-columns: subgrid;
+    grid-column: 2/2;
+    grid-template-rows: repeat(6, 100px);
     background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));
     color: white;
-}
-
-form {
-    display: grid;
-    /* align-items: center; */
-    /* justify-items: center; */
-    grid-template-rows: 1fr 150px;
 }
 
 #modal-close-btn {
@@ -84,16 +79,34 @@ form {
     right: -0;
 }
 
-#field-wrapper {
+form {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-rows: subgrid;
+    grid-template-columns: 100px 300px;
+    grid-row: 2/7;
+    justify-content: center;
+    /* grid-column: span 3; */
+    /* align-content: space-between; */
 }
+
+/* #field-wrapper {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    align-content: space-between;
+} */
 
 .field {
     display: grid;
     grid-template-columns: subgrid;
-    grid-column: span 2;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,kBAAkB;IAClB,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,aAAa;IACb,4BAA4B;IAC5B,kBAAkB;IAClB,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,6BAA6B;IAC7B,YAAY;IACZ,oBAAoB;IACpB,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,2BAA2B;IAC3B,6BAA6B;AACjC;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,gCAAgC;AACpC;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    position: relative;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    display: grid;\n    background: var(--softBlack);\n    position: absolute;\n    height: 100vh;\n    width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-rows: 150px 1fr;\n    width: 700px;\n    justify-self: center;\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\nform {\n    display: grid;\n    /* align-items: center; */\n    /* justify-items: center; */\n    grid-template-rows: 1fr 150px;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n#field-wrapper {\n    display: grid;\n    grid-template-columns: 100px 1fr;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: span 2;\n}"],"sourceRoot":""}]);
+    grid-column: span 3;
+    align-items: center;
+}
+
+#form-buttons {
+    /* place-self: center; */
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,kBAAkB;IAClB,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,sCAAsC;IACtC,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,kCAAkC;IAClC,aAAa;IACb,uBAAuB;IACvB,yBAAyB;IACzB,kCAAkC;AACtC;;AAEA;;;;;;GAMG;;AAEH;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    position: relative;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: repeat(3, 30vw);\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/2;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: 100px 300px;\n    grid-row: 2/7;\n    justify-content: center;\n    /* grid-column: span 3; */\n    /* align-content: space-between; */\n}\n\n/* #field-wrapper {\n    display: grid;\n    grid-template-columns: 100px 300px;\n    grid-template-rows: subgrid;\n    grid-row: span 4;\n    align-content: space-between;\n} */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: span 3;\n    align-items: center;\n}\n\n#form-buttons {\n    /* place-self: center; */\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

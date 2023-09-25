@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Wizard</title>
-  </head>
-  <body class="grid w-screen h-screen relative">
-    <div id="header" class="bg-gray-400 z-0 p-10 flex justify-center shadow-md">
-      <button id="modal-toggle-btn" class="bg-gray-100 px-6">
-        Add new book
-      </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Wizard</title>
+</head>
+
+<body class="grid">
+  <div id="header">
+    <button id="modal-toggle-btn">
+      Add new book
+    </button>
+  </div>
+  <div id="main"></div>
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modal-content">
+      <button id="modal-close-btn">&times;</button>
+      <h1>Add new book</h1>
+      <form action="/">
+        <!-- <div id="field-wrapper"> -->
+        <div class="field">
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div class="field">
+          <label for="author">Author</label>
+          <input type="text" id="author" />
+        </div>
+        <div class="field">
+          <label for="year">Year</label>
+          <input type="text" id="year" />
+        </div>
+        <div class="field">
+          <label for="read">Read</label>
+          <input type="checkbox" id="read" />
+        </div>
+        <!-- </div> -->
+        <div id="form-buttons">
+          <button id="add-book-btn">
+            Add book
+          </button>
+          <button id="reset-modal-btn">
+            Reset
+          </button>
+        </div>
+      </form>
     </div>
-    <div id="main" class="grid p-7 z-0"></div>
-    <!-- Modal -->
-    <div
-      id="modal"
-      class="absolute inset-0 z-10 hidden justify-center w-screen h-screen bg-slate-950 bg-opacity-40"
-    >
-      <div
-        id="modal-content"
-        class="flex flex-col w-1/2 border bg-slate-950 bg-opacity-60 p-4 gap-4"
-      >
-        <button id="modal-close-btn" class="self-end scale-150">&times;</button>
-        <h1>Add new book</h1>
-        <form action="/" class="flex flex-col">
-          <div id="field-wrapper">
-            <div class="field">
-              <label for="title">Title</label>
-              <input type="text" id="title" />
-            </div>
-            <div class="field">
-              <label for="author">Author</label>
-              <input type="text" id="author" />
-            </div>
-            <div class="field">
-              <label for="year">Year</label>
-              <input type="text" id="year" />
-            </div>
-            <div class="field">
-              <label for="read">Read</label>
-              <input type="checkbox" id="read" class="accent-green-600" />
-            </div>
-          </div>
-          <div id="form-buttons" class="flex justify-center gap-4 mt-8">
-            <button
-              id="add-book-btn"
-              class="bg-green-600 hover:bg-green-700 flex-1 py-1"
-            >
-              Add book
-            </button>
-            <button
-              id="reset-modal-btn"
-              class="bg-orange-600 hover:bg-orange-700 flex-1"
-            >
-              Reset
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div id="footer" class="flex justify-end">
-    </div>
-  </body>
+  </div>
+  <div id="footer">
+  </div>
+</body>
+
 </html>
