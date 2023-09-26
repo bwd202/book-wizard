@@ -1,5 +1,5 @@
 export {Book}
-import { myLibrary } from "./bookStorage"
+// import { myLibrary } from "./bookStorage"
 
 class Book {
     
@@ -11,15 +11,5 @@ class Book {
     this.read = read
   }
 
-  // get book() {
-  //   return this
-  // }
-
-  // static {
-    
-  //   let newBook = new Book(newBook.book)
-  //   myLibrary.push(newBook)
-  //   console.log(myLibrary)
-  // }
 
 }
