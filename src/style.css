@@ -65,14 +65,6 @@ form {
     justify-content: center;
 }
 
-/* #field-wrapper {
-    display: grid;
-    grid-template-columns: 100px 300px;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-    align-content: space-between;
-} */
-
 .field {
     display: grid;
     grid-template-columns: subgrid;
