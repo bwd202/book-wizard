@@ -14,7 +14,7 @@ function createCard(bookObj) {
     main.append(card);
   
     const removeBookBtn = document.createElement('button')
-    removeBookBtn.classList.add('button')
+    removeBookBtn.classList.add('button','card-btn')
     removeBookBtn.innerHTML = '&times;'
   
     // removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))

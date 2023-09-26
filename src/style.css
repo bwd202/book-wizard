@@ -52,8 +52,11 @@
 
 #main {
     display: grid;
+    padding: 60px;
     grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 200px;
     gap: 40px;
+    justify-content: center;
 }
 
 /* CLASSES */
@@ -78,10 +81,17 @@
 }
 
 .card {
+    position: relative;
+    display: grid;
     background-color: var(--softBlack);
     color: white;
     accent-color: red;
     padding: 10px;
+}
+
+.card-btn {
+    position: absolute;
+    right: -0;
 }
 
 /* ELEMENTS */

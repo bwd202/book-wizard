@@ -1,6 +1,20 @@
 import './style.css'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
+import { Book } from './bookClass'
+
+// TESTING
+
+let test = {
+  title: 'Doctor Zhivago',
+  author: 'Boris Pasternak',
+  year: 1970,
+  read: true,
+}
+
+createCard(new Book(test))
+
+// 
 
 let script = document.head.getElementsByTagName('script')[0]
 
