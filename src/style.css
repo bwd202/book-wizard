@@ -22,11 +22,10 @@
 
 #modal {
     position: absolute;
+    inset: 0;
     grid-template-columns: 30vw max(500px, 30vw) 30vw;
     justify-content: space-between;
     background: var(--softBlack);
-    min-height: 100vh;
-    min-width: 100vw;
 }
 
 #modal-content {
