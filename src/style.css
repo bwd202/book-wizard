@@ -1,6 +1,7 @@
 
 :root {
     --softBlack: rgba(0,0,0,0.75);
+    --goldenYellow: rgb(218, 185, 38);
 }
 
 * {
@@ -88,6 +89,7 @@
     accent-color: green;
     padding: 15px;
     border-radius: 15px;
+    border: 1px solid var(--goldenYellow);
 }
 
 .card-btn {
