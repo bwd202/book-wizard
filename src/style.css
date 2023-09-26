@@ -41,6 +41,7 @@ body {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 2;
+    align-content: space-around;
     grid-template-rows: repeat(6, 100px);
     background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));
     color: white;
@@ -77,5 +78,6 @@ form {
 }
 
 #form-buttons {
-    /* place-self: center; */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
