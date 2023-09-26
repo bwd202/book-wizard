@@ -72,7 +72,21 @@ form {
     align-items: center;
 }
 
+.field label {
+    justify-self: center;
+}
+
+[type = 'checkbox'] {
+    justify-self: start;
+    scale: 1.5;
+    /* border: 0; */
+}
+
 #form-buttons {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.button {
+    cursor: pointer;
 }
