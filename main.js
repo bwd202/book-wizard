@@ -100,10 +100,24 @@ form {
     align-items: center;
 }
 
+.field label {
+    justify-self: center;
+}
+
+[type = 'checkbox'] {
+    justify-self: start;
+    scale: 1.5;
+    /* border: 0; */
+}
+
 #form-buttons {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,yBAAyB;IACzB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    /* grid-column: span 2; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}"],"sourceRoot":""}]);
+}
+
+.button {
+    cursor: pointer;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,yBAAyB;IACzB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,eAAe;AACnB;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,eAAe;AACnB","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    /* grid-column: span 2; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    scale: 1.5;\n    /* border: 0; */\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n.button {\n    cursor: pointer;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
