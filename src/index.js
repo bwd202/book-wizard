@@ -1,18 +1,12 @@
 import './style.css'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
-// import { myLibrary } from './bookStorage'
 
 let script = document.head.getElementsByTagName('script')[0]
 
 script.setAttribute('type', 'module')
 
-// let test = new Book(getBook())
-
-// createCard(test)
-
 const modal = document.getElementById('modal');
-// modal.setAttribute('hidden', false)
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
