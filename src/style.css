@@ -9,13 +9,7 @@
     margin: 0;
 }
 
-body {
-    position: relative;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 140px 1fr;
-    background: url(book_wizard.jpg);
-}
+/* IDS */
 
 #header {
     display: grid;
@@ -28,7 +22,6 @@ body {
 
 #modal {
     position: absolute;
-    display: grid;
     grid-template-columns: 30vw max(500px, 30vw) 30vw;
     justify-content: space-between;
     background: var(--softBlack);
@@ -52,6 +45,43 @@ body {
     right: -0;
 }
 
+
+#form-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* CLASSES */
+
+.field {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2/4;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    display: grid;
+}
+
+/* ELEMENTS */
+
+body {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 140px 1fr;
+    background: url(book_wizard.jpg);
+}
+
 h1 {
     place-self: center;
 }
@@ -61,15 +91,7 @@ form {
     grid-template-rows: subgrid;
     grid-template-columns: repeat(4, 1fr);
     grid-row: 2/7;
-    /* grid-column: span 2; */
     justify-content: center;
-}
-
-.field {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 2/4;
-    align-items: center;
 }
 
 .field label {
@@ -78,17 +100,7 @@ form {
 
 [type = 'checkbox'] {
     justify-self: start;
-    /* appearance: none;  */
     width: 25px;
     height: 25px;
     background-color: whitesmoke;
-}
-
-#form-buttons {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.button {
-    cursor: pointer;
 }

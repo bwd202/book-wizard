@@ -1,8 +1,7 @@
 import './style.css'
-// import './old_style.css'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
-import { myLibrary } from './bookStorage'
+// import { myLibrary } from './bookStorage'
 
 let script = document.head.getElementsByTagName('script')[0]
 
@@ -12,29 +11,26 @@ script.setAttribute('type', 'module')
 
 // createCard(test)
 
-// MODAL
 const modal = document.getElementById('modal');
-// modal.setAttribute('hidden', true)
+// modal.setAttribute('hidden', false)
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
   .addEventListener('click', () => {
-    // modal.classList.toggle('hidden');
-    // modal.classList.toggle('flex');
-    modal.toggleAttribute('hidden')
+    modal.classList.remove('hidden');
+    modal.classList.add('visible');
   });
 
 window.onclick = function (e) {
   if (e.target === modal) {
-    // modal.classList.remove('flex');
-    // modal.classList.add('hidden');
-    modal.toggleAttribute('hidden')
+    modal.classList.remove('visible');
+    modal.classList.add('hidden');
   }
 };
 
 const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListener('click', () => {
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
+  modal.classList.add('hidden');
+  modal.classList.remove('visible');
 })
 
 function displayNewBook(e) {
@@ -44,11 +40,6 @@ function displayNewBook(e) {
   document.querySelector('#main').append(createCard(getBook()))
 
 }
-
-// function pushBookToArr(arr) {
-
-//   arr.push()
-// }
 
 const addBookBtn = document
   .querySelector('#add-book-btn')

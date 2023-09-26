@@ -37,13 +37,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     margin: 0;
 }
 
-body {
-    position: relative;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 140px 1fr;
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-}
+/* IDS */
 
 #header {
     display: grid;
@@ -56,7 +50,6 @@ body {
 
 #modal {
     position: absolute;
-    display: grid;
     grid-template-columns: 30vw max(500px, 30vw) 30vw;
     justify-content: space-between;
     background: var(--softBlack);
@@ -80,6 +73,43 @@ body {
     right: -0;
 }
 
+
+#form-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* CLASSES */
+
+.field {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2/4;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    display: grid;
+}
+
+/* ELEMENTS */
+
+body {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 140px 1fr;
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
 h1 {
     place-self: center;
 }
@@ -89,15 +119,7 @@ form {
     grid-template-rows: subgrid;
     grid-template-columns: repeat(4, 1fr);
     grid-row: 2/7;
-    /* grid-column: span 2; */
     justify-content: center;
-}
-
-.field {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 2/4;
-    align-items: center;
 }
 
 .field label {
@@ -106,20 +128,10 @@ form {
 
 [type = 'checkbox'] {
     justify-self: start;
-    /* appearance: none;  */
     width: 25px;
     height: 25px;
     background-color: whitesmoke;
-}
-
-#form-buttons {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.button {
-    cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,yBAAyB;IACzB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,mBAAmB;IACnB,uBAAuB;IACvB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,eAAe;AACnB","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    /* grid-column: span 2; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    /* appearance: none;  */\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n.button {\n    cursor: pointer;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;;AAGA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.button {\n    cursor: pointer;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -906,12 +918,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
 /* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
-/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
-
-// import './old_style.css'
 
 
 
+// import { myLibrary } from './bookStorage'
 
 let script = document.head.getElementsByTagName('script')[0]
 
@@ -921,29 +931,26 @@ script.setAttribute('type', 'module')
 
 // createCard(test)
 
-// MODAL
 const modal = document.getElementById('modal');
-// modal.setAttribute('hidden', true)
+// modal.setAttribute('hidden', false)
 
 const modalBtn = document
   .getElementById('modal-toggle-btn')
   .addEventListener('click', () => {
-    // modal.classList.toggle('hidden');
-    // modal.classList.toggle('flex');
-    modal.toggleAttribute('hidden')
+    modal.classList.remove('hidden');
+    modal.classList.add('visible');
   });
 
 window.onclick = function (e) {
   if (e.target === modal) {
-    // modal.classList.remove('flex');
-    // modal.classList.add('hidden');
-    modal.toggleAttribute('hidden')
+    modal.classList.remove('visible');
+    modal.classList.add('hidden');
   }
 };
 
 const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListener('click', () => {
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
+  modal.classList.add('hidden');
+  modal.classList.remove('visible');
 })
 
 function displayNewBook(e) {
@@ -953,11 +960,6 @@ function displayNewBook(e) {
   document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
 
 }
-
-// function pushBookToArr(arr) {
-
-//   arr.push()
-// }
 
 const addBookBtn = document
   .querySelector('#add-book-btn')
