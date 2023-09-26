@@ -80,14 +80,17 @@ body {
     right: -0;
 }
 
+h1 {
+    place-self: center;
+}
+
 form {
     display: grid;
     grid-template-rows: subgrid;
+    grid-template-columns: repeat(4, 1fr);
     grid-row: 2/7;
-    grid-template-columns: 100px 300px;
+    /* grid-column: span 2; */
     justify-content: center;
-    /* grid-column: span 3; */
-    /* align-content: space-between; */
 }
 
 /* #field-wrapper {
@@ -101,14 +104,14 @@ form {
 .field {
     display: grid;
     grid-template-columns: subgrid;
-    grid-column: span 2;
+    grid-column: 2/4;
     align-items: center;
 }
 
 #form-buttons {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,aAAa;IACb,kCAAkC;IAClC,uBAAuB;IACvB,yBAAyB;IACzB,kCAAkC;AACtC;;AAEA;;;;;;GAMG;;AAEH;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-row: 2/7;\n    grid-template-columns: 100px 300px;\n    justify-content: center;\n    /* grid-column: span 3; */\n    /* align-content: space-between; */\n}\n\n/* #field-wrapper {\n    display: grid;\n    grid-template-columns: 100px 300px;\n    grid-template-rows: subgrid;\n    grid-row: span 4;\n    align-content: space-between;\n} */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: span 2;\n    align-items: center;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,yBAAyB;IACzB,uBAAuB;AAC3B;;AAEA;;;;;;GAMG;;AAEH;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    display: grid;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n    min-height: 100vh;\n    min-width: 100vw;\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    /* grid-column: span 2; */\n    justify-content: center;\n}\n\n/* #field-wrapper {\n    display: grid;\n    grid-template-columns: 100px 300px;\n    grid-template-rows: subgrid;\n    grid-row: span 4;\n    align-content: space-between;\n} */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
