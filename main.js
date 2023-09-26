@@ -99,6 +99,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     display: grid;
 }
 
+.card {
+    
+}
+
 /* ELEMENTS */
 
 body {
@@ -134,7 +138,7 @@ form {
     width: 25px;
     height: 25px;
     background-color: whitesmoke;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;;AAGA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.button {\n    cursor: pointer;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: red;\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;AACjC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;;AAGA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;;AAEA;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.button {\n    cursor: pointer;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    \n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: red;\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -678,9 +682,9 @@ function createCard(bookObj) {
     let wrapper = new DocumentFragment()
   
     const main = document.querySelector('#main');
+
     const card = document.createElement('div');
-  
-    card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
+    card.classList.add('card');
   
     // card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
   
@@ -688,7 +692,7 @@ function createCard(bookObj) {
   
     // GUI
     const removeBookBtn = document.createElement('button')
-    removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
+    removeBookBtn.classList.add('button')
     removeBookBtn.innerHTML = '&times;'
   
     // removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
@@ -698,7 +702,7 @@ function createCard(bookObj) {
     card.appendChild(removeBookBtn)
   
     const bookTitle = document.createElement('h2');
-    bookTitle.classList.add('font-bold','text-lg')
+    // bookTitle.classList.add('')
     bookTitle.textContent = bookObj.title
     card.appendChild(bookTitle);
   
@@ -712,7 +716,6 @@ function createCard(bookObj) {
   
     const bookRead = document.createElement('input');
     bookRead.setAttribute('type','checkbox')
-    bookRead.classList.add('accent-gray-400')
   
     if(bookObj.read) bookRead.checked = true;
     card.appendChild(bookRead);
