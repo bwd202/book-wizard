@@ -5,9 +5,9 @@ function createCard(bookObj) {
     let wrapper = new DocumentFragment()
   
     const main = document.querySelector('#main');
+
     const card = document.createElement('div');
-  
-    card.classList.add('border','border-gray-500','flex', 'flex-col', 'justify-between', 'items-center' ,'p-4', 'rounded-lg', 'shadow-md');
+    card.classList.add('card');
   
     // card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
   
@@ -15,7 +15,7 @@ function createCard(bookObj) {
   
     // GUI
     const removeBookBtn = document.createElement('button')
-    removeBookBtn.classList.add('self-end', 'scale-125', 'remove-book-btn')
+    removeBookBtn.classList.add('button')
     removeBookBtn.innerHTML = '&times;'
   
     // removeBookBtn.setAttribute('data-book-index', myLibrary.indexOf(newBook))
@@ -25,7 +25,7 @@ function createCard(bookObj) {
     card.appendChild(removeBookBtn)
   
     const bookTitle = document.createElement('h2');
-    bookTitle.classList.add('font-bold','text-lg')
+    // bookTitle.classList.add('')
     bookTitle.textContent = bookObj.title
     card.appendChild(bookTitle);
   
@@ -39,7 +39,6 @@ function createCard(bookObj) {
   
     const bookRead = document.createElement('input');
     bookRead.setAttribute('type','checkbox')
-    bookRead.classList.add('accent-gray-400')
   
     if(bookObj.read) bookRead.checked = true;
     card.appendChild(bookRead);
