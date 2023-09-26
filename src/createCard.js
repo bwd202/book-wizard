@@ -13,7 +13,6 @@ function createCard(bookObj) {
   
     main.append(card);
   
-    // GUI
     const removeBookBtn = document.createElement('button')
     removeBookBtn.classList.add('button')
     removeBookBtn.innerHTML = '&times;'

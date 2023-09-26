@@ -81,6 +81,7 @@
     background-color: var(--softBlack);
     color: white;
     accent-color: red;
+    padding: 10px;
 }
 
 /* ELEMENTS */
