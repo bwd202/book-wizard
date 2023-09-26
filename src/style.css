@@ -85,13 +85,19 @@
     display: grid;
     background-color: var(--softBlack);
     color: white;
-    accent-color: red;
-    padding: 10px;
+    accent-color: green;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .card-btn {
     position: absolute;
     right: -0;
+    width: 20px;
+}
+
+.card-btn:hover {
+    background-color: red;
 }
 
 /* ELEMENTS */
@@ -121,7 +127,7 @@ form {
 }
 
 .field input {
-    accent-color: red;
+    accent-color: green;
 }
 
 [type = 'checkbox'] {
