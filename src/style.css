@@ -97,10 +97,13 @@ form {
     justify-self: center;
 }
 
+.field input {
+    accent-color: red;
+}
+
 [type = 'checkbox'] {
     justify-self: start;
     width: 25px;
     height: 25px;
     background-color: whitesmoke;
-    accent-color: red;
 }
