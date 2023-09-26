@@ -50,6 +50,12 @@
     gap: 20px;
 }
 
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 40px;
+}
+
 /* CLASSES */
 
 .field {
@@ -72,7 +78,9 @@
 }
 
 .card {
-    
+    background-color: var(--softBlack);
+    color: white;
+    accent-color: red;
 }
 
 /* ELEMENTS */
