@@ -78,8 +78,10 @@ form {
 
 [type = 'checkbox'] {
     justify-self: start;
-    scale: 1.5;
-    /* border: 0; */
+    /* appearance: none;  */
+    width: 25px;
+    height: 25px;
+    background-color: whitesmoke;
 }
 
 #form-buttons {
