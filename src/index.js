@@ -5,14 +5,24 @@ import { Book } from './bookClass'
 
 // TESTING
 
-let test = {
-  title: 'Doctor Zhivago',
-  author: 'Boris Pasternak',
-  year: 1970,
+let defaultBook = {
+  title: 'The Dharma Bums',
+  author: 'Jack Kerouac',
+  year: 1958,
+  read: false,
+}
+
+let defaultBook1 = {
+  title: 'To Kill a Mockingbird',
+  author: 'Harper Lee',
+  year: 1960,
   read: true,
 }
 
-createCard(new Book(test))
+
+
+createCard(new Book(defaultBook))
+createCard(new Book(defaultBook1))
 
 // 
 
