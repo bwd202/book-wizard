@@ -2,3 +2,4 @@ node_modules
 tailwind.config.js
 tailwind.css
 todo.md
+.vscode
