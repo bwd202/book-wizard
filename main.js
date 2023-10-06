@@ -958,14 +958,24 @@ __webpack_require__.r(__webpack_exports__);
 
 // TESTING
 
-let test = {
-  title: 'Doctor Zhivago',
-  author: 'Boris Pasternak',
-  year: 1970,
+let defaultBook = {
+  title: 'The Dharma Bums',
+  author: 'Jack Kerouac',
+  year: 1958,
+  read: false,
+}
+
+let defaultBook1 = {
+  title: 'To Kill a Mockingbird',
+  author: 'Harper Lee',
+  year: 1960,
   read: true,
 }
 
-;(0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)(new _bookClass__WEBPACK_IMPORTED_MODULE_3__.Book(test))
+
+
+;(0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)(new _bookClass__WEBPACK_IMPORTED_MODULE_3__.Book(defaultBook))
+;(0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)(new _bookClass__WEBPACK_IMPORTED_MODULE_3__.Book(defaultBook1))
 
 // 
 
