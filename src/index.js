@@ -1,7 +1,6 @@
 import './style.css'
 import { createCard } from './createCard'
 import { getBook } from './getBook'
-import { Book } from './bookClass'
 
 // TESTING
 
@@ -19,10 +18,8 @@ let defaultBook1 = {
   read: true,
 }
 
-
-
-createCard(new Book(defaultBook))
-createCard(new Book(defaultBook1))
+document.querySelector('#main').append(createCard(getBook(defaultBook)))
+document.querySelector('#main').append(createCard(getBook(defaultBook1)))
 
 // 
 

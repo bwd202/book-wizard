@@ -1,10 +1,22 @@
 export {getBook}
-import {Book} from './bookClass'
 import { myLibrary } from './bookStorage'
+
+class Book {
+    
+    constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+  
+      this.title = title
+      this.author = author
+      this.year = year
+      this.read = read
+    }
+  }
 
 // gets book info from modal and returns new book obj
 // pushes book to library
-function getBook() {
+function getBook(testObj) {
+
+    if(testObj) return testObj
 
     // modal fields
     let title = document.querySelector('#title').value
