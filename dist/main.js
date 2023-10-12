@@ -680,14 +680,12 @@ function createCard(bookObj) {
 
     let wrapper = new DocumentFragment()
   
-    const main = document.querySelector('#main');
-
     const card = document.createElement('div');
     card.classList.add('card');
   
     // card.setAttribute('data-book-index', myLibrary.indexOf(newBook))
   
-    main.append(card);
+    wrapper.append(card)
   
     const removeBookBtn = document.createElement('button')
     removeBookBtn.classList.add('button','card-btn')
@@ -722,7 +720,7 @@ function createCard(bookObj) {
     //   if(bookRead.checked) newBook.read = true;
     //   else if (!bookRead.checked) newBook.read = false;
     // })
-  
+    
     return wrapper
   }
 
