@@ -2,7 +2,7 @@ export {createCard}
 
 function createCard(bookObj) {
 
-    let wrapper = new DocumentFragment()
+    // let wrapper = new DocumentFragment()
   
     const main = document.querySelector('#main');
 
@@ -47,5 +47,5 @@ function createCard(bookObj) {
     //   else if (!bookRead.checked) newBook.read = false;
     // })
   
-    return wrapper
+    // return wrapper
   }
