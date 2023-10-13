@@ -24,10 +24,8 @@ function getBook(testObj) {
     let year = document.querySelector('#year').value
     let read = document.querySelector('#read').checked
 
-    let book = new Book({title, author, year, read})
-
     myLibrary.push(book)
     console.log(myLibrary)
 
-    return book
+    return new Book({title, author, year, read})
 }
