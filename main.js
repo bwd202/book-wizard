@@ -664,10 +664,10 @@ let myLibrary = [];
 
 /***/ }),
 
-/***/ "./src/createCard.js":
-/*!***************************!*\
-  !*** ./src/createCard.js ***!
-  \***************************/
+/***/ "./src/card.js":
+/*!*********************!*\
+  !*** ./src/card.js ***!
+  \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -763,12 +763,10 @@ function getBook(testObj) {
     let year = document.querySelector('#year').value
     let read = document.querySelector('#read').checked
 
-    let book = new Book({title, author, year, read})
-
-    _bookStorage__WEBPACK_IMPORTED_MODULE_0__.myLibrary.push(book)
+    // myLibrary.push(book)
     console.log(_bookStorage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
 
-    return book
+    return new Book({title, author, year, read})
 }
 
 
@@ -929,7 +927,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _createCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createCard */ "./src/createCard.js");
+/* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card */ "./src/card.js");
 /* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
 
 
@@ -951,8 +949,8 @@ let defaultBook1 = {
   read: true,
 }
 
-document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook)))
-document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook1)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook1)))
 
 // 
 
@@ -985,7 +983,7 @@ function displayNewBook(e) {
   
   e.preventDefault()
 
-  document.querySelector('#main').append((0,_createCard__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
+  document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
 
 }
 
