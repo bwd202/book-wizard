@@ -50,9 +50,11 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
 
 function displayNewBook(e) {
   
-  e.preventDefault()
+  // e.preventDefault()
 
-  document.querySelector('#main').append(createCard(getBook()))
+  let main = document.querySelector('#main')
+
+  main.append(createCard(getBook()))
 
 }
 

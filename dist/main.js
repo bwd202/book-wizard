@@ -997,9 +997,11 @@ const modalCloseBtn = document.querySelector('#modal-close-btn').addEventListene
 
 function displayNewBook(e) {
   
-  e.preventDefault()
+  // e.preventDefault()
 
-  document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
+  let main = document.querySelector('#main')
+
+  main.append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
 
 }
 
