@@ -1001,8 +1001,24 @@ function displayNewBook(e) {
 
   let main = document.querySelector('#main')
 
-  main.append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
+  if(hasRequired()) {
 
+    main.append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
+
+  }
+}
+
+function hasRequired() {
+
+  let title = document.querySelector('#title')
+
+  let author = document.querySelector('#author')
+
+  if(title.validity.valueMissing || author.validity.valueMissing) {
+    
+    return false
+  }
+  else return true
 }
 
 const addBookBtn = document

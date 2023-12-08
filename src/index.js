@@ -54,8 +54,24 @@ function displayNewBook(e) {
 
   let main = document.querySelector('#main')
 
-  main.append(createCard(getBook()))
+  if(hasRequired()) {
 
+    main.append(createCard(getBook()))
+
+  }
+}
+
+function hasRequired() {
+
+  let title = document.querySelector('#title')
+
+  let author = document.querySelector('#author')
+
+  if(title.validity.valueMissing || author.validity.valueMissing) {
+    
+    return false
+  }
+  else return true
 }
 
 const addBookBtn = document
