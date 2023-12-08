@@ -1,6 +1,6 @@
 import './style.css'
 import { createCard } from './card'
-import { getBook } from './getBook'
+import { getBook } from './book'
 
 // TESTING
 

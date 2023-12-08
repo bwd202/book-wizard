@@ -647,6 +647,52 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/book.js":
+/*!*********************!*\
+  !*** ./src/book.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getBook: () => (/* binding */ getBook)
+/* harmony export */ });
+/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
+
+;
+
+class Book {
+    
+    constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
+  
+      this.title = title
+      this.author = author
+      this.year = year
+      this.read = read
+    }
+  }
+
+// gets book info from modal and returns new book obj
+// pushes book to library
+function getBook(testObj) {
+
+    if(testObj) return testObj
+
+    // modal fields
+    let title = document.querySelector('#title').value
+    let author = document.querySelector('#author').value
+    let year = document.querySelector('#year').value
+    let read = document.querySelector('#read').checked
+
+    // myLibrary.push(book)
+    console.log(_bookStorage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
+
+    return new Book({title, author, year, read})
+}
+
+
+/***/ }),
+
 /***/ "./src/bookStorage.js":
 /*!****************************!*\
   !*** ./src/bookStorage.js ***!
@@ -723,52 +769,6 @@ function createCard(bookObj) {
     
     return wrapper
   }
-
-/***/ }),
-
-/***/ "./src/getBook.js":
-/*!************************!*\
-  !*** ./src/getBook.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getBook: () => (/* binding */ getBook)
-/* harmony export */ });
-/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
-
-;
-
-class Book {
-    
-    constructor({title = 'default', author = 'default', year = 1970, read = false} = {}) {
-  
-      this.title = title
-      this.author = author
-      this.year = year
-      this.read = read
-    }
-  }
-
-// gets book info from modal and returns new book obj
-// pushes book to library
-function getBook(testObj) {
-
-    if(testObj) return testObj
-
-    // modal fields
-    let title = document.querySelector('#title').value
-    let author = document.querySelector('#author').value
-    let year = document.querySelector('#year').value
-    let read = document.querySelector('#read').checked
-
-    // myLibrary.push(book)
-    console.log(_bookStorage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
-
-    return new Book({title, author, year, read})
-}
-
 
 /***/ }),
 
@@ -928,7 +928,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card */ "./src/card.js");
-/* harmony import */ var _getBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getBook */ "./src/getBook.js");
+/* harmony import */ var _book__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./book */ "./src/book.js");
 
 
 
@@ -949,8 +949,8 @@ let defaultBook1 = {
   read: true,
 }
 
-document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook)))
-document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook1)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)(defaultBook1)))
 
 // 
 
@@ -983,7 +983,7 @@ function displayNewBook(e) {
   
   e.preventDefault()
 
-  document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_getBook__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
+  document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_1__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_2__.getBook)()))
 
 }
 
