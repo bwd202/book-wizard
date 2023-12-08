@@ -21,25 +21,25 @@
     <div id="modal-content">
       <button id="modal-close-btn" class="button">&times;</button>
       <h1>Add new book</h1>
-      <form action="/">
+      <form action="#" method="get">
         <div class="field">
           <label for="title">Title</label>
-          <input type="text" id="title" required/>
+          <input type="text" id="title" maxlength="20"/>
         </div>
         <div class="field">
           <label for="author">Author</label>
-          <input type="text" id="author" />
+          <input type="text" id="author" maxlength="15"/>
         </div>
         <div class="field">
           <label for="year">Year</label>
-          <input type="text" id="year" />
+          <input type="text" id="year" maxlength="4"/>
         </div>
         <div class="field">
           <label for="read">Read</label>
           <input type="checkbox" id="read" class="button"/>
         </div>
         <div id="form-buttons" class="field">
-          <button id="add-book-btn" class="button">
+          <button id="add-book-btn" type="submit" class="button">
             Add book
           </button>
           <button id="reset-modal-btn" class="button">
