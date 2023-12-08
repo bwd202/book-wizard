@@ -31,6 +31,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     --softBlack: rgba(0,0,0,0.75);
     --card-border: rgb(218, 185, 38);
     --close-btn-hover: rgb(255, 136, 0);
+    --invalid-input: red;
 }
 
 * {
@@ -166,7 +167,11 @@ form {
     width: 25px;
     height: 25px;
     background-color: whitesmoke;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;IAC7B,gCAAgC;IAChC,mCAAmC;AACvC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;;AAGA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,WAAW;AACf;;AAEA;IACI,wCAAwC;AAC5C;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgb(218, 185, 38);\n    --close-btn-hover: rgb(255, 136, 0);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.button {\n    cursor: pointer;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    position: relative;\n    display: grid;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}\n\n.card-btn {\n    position: absolute;\n    right: -0;\n    width: 20px;\n}\n\n.card-btn:hover {\n    background-color: var(--close-btn-hover);\n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}"],"sourceRoot":""}]);
+}
+
+input:invalid {
+    accent-color: var(--invalid-input);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA;IACI,6BAA6B;IAC7B,gCAAgC;IAChC,mCAAmC;IACnC,oBAAoB;AACxB;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,2BAA2B;IAC3B,oCAAoC;IACpC,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,SAAS;AACb;;;AAGA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,WAAW;AACf;;AAEA;IACI,wCAAwC;AAC5C;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["\n:root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgb(218, 185, 38);\n    --close-btn-hover: rgb(255, 136, 0);\n    --invalid-input: red;\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    align-content: space-around;\n    grid-template-rows: repeat(6, 100px);\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#modal-close-btn {\n    position: absolute;\n    right: -0;\n}\n\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.button {\n    cursor: pointer;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    position: relative;\n    display: grid;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}\n\n.card-btn {\n    position: absolute;\n    right: -0;\n    width: 20px;\n}\n\n.card-btn:hover {\n    background-color: var(--close-btn-hover);\n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    grid-template-rows: subgrid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-row: 2/7;\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -686,9 +691,19 @@ function getBook(testObj) {
     let read = document.querySelector('#read').checked
 
     // myLibrary.push(book)
-    console.log(_storage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
+    // console.log(myLibrary)
+
+    resetModal()
 
     return new Book({title, author, year, read})
+}
+
+function resetModal() {
+
+  let form = document.querySelector('#bookForm')
+
+  form.reset()
+  
 }
 
 
