@@ -1,5 +1,5 @@
 export {getBook}
-import { myLibrary } from './bookStorage'
+import { myLibrary } from './storage'
 
 class Book {
     

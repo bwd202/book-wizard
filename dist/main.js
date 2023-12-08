@@ -657,7 +657,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getBook: () => (/* binding */ getBook)
 /* harmony export */ });
-/* harmony import */ var _bookStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bookStorage */ "./src/bookStorage.js");
+/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ "./src/storage.js");
 
 ;
 
@@ -685,27 +685,10 @@ function getBook(testObj) {
     let read = document.querySelector('#read').checked
 
     // myLibrary.push(book)
-    console.log(_bookStorage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
+    console.log(_storage__WEBPACK_IMPORTED_MODULE_0__.myLibrary)
 
     return new Book({title, author, year, read})
 }
-
-
-/***/ }),
-
-/***/ "./src/bookStorage.js":
-/*!****************************!*\
-  !*** ./src/bookStorage.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   myLibrary: () => (/* binding */ myLibrary)
-/* harmony export */ });
-
-
-let myLibrary = [];
 
 
 /***/ }),
@@ -769,6 +752,23 @@ function createCard(bookObj) {
     
     return wrapper
   }
+
+/***/ }),
+
+/***/ "./src/storage.js":
+/*!************************!*\
+  !*** ./src/storage.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   myLibrary: () => (/* binding */ myLibrary)
+/* harmony export */ });
+
+
+let myLibrary = [];
+
 
 /***/ }),
 
