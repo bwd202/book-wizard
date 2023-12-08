@@ -1,7 +1,8 @@
 
 :root {
     --softBlack: rgba(0,0,0,0.75);
-    --goldenYellow: rgb(218, 185, 38);
+    --card-border: rgb(218, 185, 38);
+    --close-btn-hover: rgb(255, 136, 0);
 }
 
 * {
@@ -86,10 +87,10 @@
     display: grid;
     background-color: var(--softBlack);
     color: white;
-    accent-color: green;
+    accent-color: var(--card-border);
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid var(--goldenYellow);
+    border: 1px solid var(--card-border);
 }
 
 .card-btn {
@@ -99,7 +100,7 @@
 }
 
 .card-btn:hover {
-    background-color: red;
+    background-color: var(--close-btn-hover);
 }
 
 /* ELEMENTS */
@@ -129,7 +130,7 @@ form {
 }
 
 .field input {
-    accent-color: green;
+    accent-color: var(--close-btn-hover);
 }
 
 [type = 'checkbox'] {
