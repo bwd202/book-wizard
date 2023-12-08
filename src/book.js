@@ -25,7 +25,17 @@ function getBook(testObj) {
     let read = document.querySelector('#read').checked
 
     // myLibrary.push(book)
-    console.log(myLibrary)
+    // console.log(myLibrary)
+
+    resetModal()
 
     return new Book({title, author, year, read})
+}
+
+function resetModal() {
+
+  let form = document.querySelector('#bookForm')
+
+  form.reset()
+  
 }
