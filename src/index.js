@@ -1,5 +1,5 @@
 import './style.css'
-import { createCard } from './createCard'
+import { createCard } from './card'
 import { getBook } from './getBook'
 
 // TESTING
