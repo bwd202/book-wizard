@@ -16,7 +16,6 @@ h1 {
     gap: 10px;
     grid-template-columns: subgrid;
     grid-column: 2;
-    /* align-content: space-around; */
     grid-template-rows: repeat(2, max-content) 1fr;
     background: linear-gradient(var(--card-border), var(--card-border-transp));
 }
@@ -25,10 +24,8 @@ h1 {
 
 form {
     display: grid;
-    /* grid-template-rows: subgrid; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
-    /* grid-row: 3/7; */
     justify-content: center;
 }
 
@@ -41,16 +38,6 @@ form {
 
 .field label {
     justify-self: center;
-}
-
-.field input {
-    accent-color: var(--input-accent);
-}
-
-[type = 'checkbox'] {
-    justify-self: start;
-    width: 25px;
-    height: 25px;
 }
 
 input:invalid {
