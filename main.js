@@ -84,7 +84,61 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `#modal {
+    position: absolute;
+    inset: 0;
+    grid-template-columns: 30vw max(500px, 30vw) 30vw;
+    justify-content: space-between;
+    background: var(--softBlack);
+}
+
+#modal-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2;
+    /* align-content: space-around; */
+    grid-template-rows: repeat(2, max-content) 1fr;
+    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));
+    color: white;
+}
+
+/* FORM */
+
+form {
+    display: grid;
+    /* grid-template-rows: subgrid; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    /* grid-row: 3/7; */
+    justify-content: center;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2/4;
+    align-items: center;
+}
+
+.field label {
+    justify-self: center;
+}
+
+.field input {
+    accent-color: var(--close-btn-hover);
+}
+
+[type = 'checkbox'] {
+    justify-self: start;
+    width: 25px;
+    height: 25px;
+    background-color: whitesmoke;
+}
+
+input:invalid {
+    accent-color: var(--invalid-input);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,iCAAiC;IACjC,8CAA8C;IAC9C,gEAAgE;IAChE,YAAY;AAChB;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,iCAAiC;IACjC,qCAAqC;IACrC,oCAAoC;IACpC,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    /* align-content: space-around; */\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    /* grid-template-rows: subgrid; */\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    /* grid-row: 3/7; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -129,29 +183,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     margin: 0;
 }
 
-/* IDS */
+body {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 140px 1fr;
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+h1 {
+    place-self: center;
+}
 
 #header {
     display: grid;
-}
-
-#modal {
-    position: absolute;
-    inset: 0;
-    grid-template-columns: 30vw max(500px, 30vw) 30vw;
-    justify-content: space-between;
-    background: var(--softBlack);
-}
-
-#modal-content {
-    position: relative;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 2;
-    /* align-content: space-around; */
-    grid-template-rows: repeat(2, max-content) 1fr;
-    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));
-    color: white;
 }
 
 #main {
@@ -161,15 +206,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     grid-auto-rows: 200px;
     gap: 40px;
     justify-content: center;
-}
-
-/* CLASSES */
-
-.field {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 2/4;
-    align-items: center;
 }
 
 .hidden {
@@ -190,49 +226,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}
-
-/* ELEMENTS */
-
-body {
-    position: relative;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 140px 1fr;
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-}
-
-h1 {
-    place-self: center;
-}
-
-form {
-    display: grid;
-    /* grid-template-rows: subgrid; */
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 100px);
-    /* grid-row: 3/7; */
-    justify-content: center;
-}
-
-.field label {
-    justify-self: center;
-}
-
-.field input {
-    accent-color: var(--close-btn-hover);
-}
-
-[type = 'checkbox'] {
-    justify-self: start;
-    width: 25px;
-    height: 25px;
-    background-color: whitesmoke;
-}
-
-input:invalid {
-    accent-color: var(--invalid-input);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,gCAAgC;IAChC,oBAAoB;IACpB;;AAEJ;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA,QAAQ;;AAER;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,iCAAiC;IACjC,8CAA8C;IAC9C,gEAAgE;IAChE,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA,aAAa;;AAEb;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,iCAAiC;IACjC,qCAAqC;IACrC,oCAAoC;IACpC,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgb(218, 185, 38);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black)\n\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\n/* IDS */\n\n#header {\n    display: grid;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    /* align-content: space-around; */\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));\n    color: white;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n/* CLASSES */\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    /* position: relative; */\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}\n\n/* ELEMENTS */\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\nform {\n    display: grid;\n    /* grid-template-rows: subgrid; */\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    /* grid-row: 3/7; */\n    justify-content: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,gCAAgC;IAChC,oBAAoB;IACpB;;AAEJ;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgb(218, 185, 38);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black)\n\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    /* position: relative; */\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
