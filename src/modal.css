@@ -14,7 +14,7 @@
     grid-column: 2;
     /* align-content: space-around; */
     grid-template-rows: repeat(2, max-content) 1fr;
-    background: linear-gradient(rgba(55,46,3,1),rgba(168,139,9,0.5));
+    background: linear-gradient(var(--card-border), var(--card-border-transp));
     color: white;
 }
 

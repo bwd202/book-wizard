@@ -1,6 +1,7 @@
 :root {
     --softBlack: rgba(0,0,0,0.75);
-    --card-border: rgb(218, 185, 38);
+    --card-border: rgba(218, 185, 38, 1);
+    --card-border-transp: rgba(218, 185, 38, 0);
     --invalid-input: red;
     --close-btn-hover: linear-gradient(red, black)
 
