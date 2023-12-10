@@ -1,3 +1,7 @@
+h1 {
+    place-self: center;
+}
+
 #modal {
     position: absolute;
     inset: 0;
@@ -15,7 +19,6 @@
     /* align-content: space-around; */
     grid-template-rows: repeat(2, max-content) 1fr;
     background: linear-gradient(var(--card-border), var(--card-border-transp));
-    color: white;
 }
 
 /* FORM */

@@ -21,9 +21,7 @@ body {
     background: url(book_wizard.jpg);
 }
 
-h1 {
-    place-self: center;
-}
+
 
 #header {
     display: grid;
