@@ -9,6 +9,7 @@
 #modal-content {
     position: relative;
     display: grid;
+    gap: 10px;
     grid-template-columns: subgrid;
     grid-column: 2;
     /* align-content: space-around; */

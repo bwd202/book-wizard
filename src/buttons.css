@@ -3,7 +3,7 @@
     cursor: pointer;
 }
 
-.card-btn {
+.close-btn {
     position: relative;
     right: -7px;
     top: -7px;
@@ -16,18 +16,19 @@
     color: white;
 }
 
-.card-btn:hover {
+.close-btn:hover {
     background-image: var(--close-btn-hover);
+}
+
+#modal-content .close-btn {
+    position: relative;
+    top: 5px;
+    right: -0;
 }
 
 #form-buttons {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-}
-
-#modal-close-btn {
-    position: absolute;
-    right: -0;
 }
 
 #modal-toggle-btn {
