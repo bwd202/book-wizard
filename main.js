@@ -85,7 +85,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `#modal {
+___CSS_LOADER_EXPORT___.push([module.id, `h1 {
+    place-self: center;
+}
+
+#modal {
     position: absolute;
     inset: 0;
     grid-template-columns: 30vw max(500px, 30vw) 30vw;
@@ -102,7 +106,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#modal {
     /* align-content: space-around; */
     grid-template-rows: repeat(2, max-content) 1fr;
     background: linear-gradient(var(--card-border), var(--card-border-transp));
-    color: white;
 }
 
 /* FORM */
@@ -140,7 +143,7 @@ form {
 
 input:invalid {
     accent-color: var(--invalid-input);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,iCAAiC;IACjC,8CAA8C;IAC9C,0EAA0E;IAC1E,YAAY;AAChB;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,iCAAiC;IACjC,qCAAqC;IACrC,oCAAoC;IACpC,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    /* align-content: space-around; */\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n    color: white;\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    /* grid-template-rows: subgrid; */\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    /* grid-row: 3/7; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,iCAAiC;IACjC,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,iCAAiC;IACjC,qCAAqC;IACrC,oCAAoC;IACpC,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    /* align-content: space-around; */\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    /* grid-template-rows: subgrid; */\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    /* grid-row: 3/7; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--close-btn-hover);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n    background-color: whitesmoke;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -194,9 +197,7 @@ body {
     background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
 }
 
-h1 {
-    place-self: center;
-}
+
 
 #header {
     display: grid;
@@ -229,7 +230,7 @@ h1 {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB;;AAEJ;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black)\n\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\nh1 {\n    place-self: center;\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    /* position: relative; */\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB;;AAEJ;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;;;AAIA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black)\n\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    /* position: relative; */\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
