@@ -44,14 +44,13 @@ form {
 }
 
 .field input {
-    accent-color: var(--close-btn-hover);
+    accent-color: var(--input-accent);
 }
 
 [type = 'checkbox'] {
     justify-self: start;
     width: 25px;
     height: 25px;
-    background-color: whitesmoke;
 }
 
 input:invalid {
