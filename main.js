@@ -103,7 +103,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h1 {
     gap: 10px;
     grid-template-columns: subgrid;
     grid-column: 2;
-    /* align-content: space-around; */
     grid-template-rows: repeat(2, max-content) 1fr;
     background: linear-gradient(var(--card-border), var(--card-border-transp));
 }
@@ -112,10 +111,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h1 {
 
 form {
     display: grid;
-    /* grid-template-rows: subgrid; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
-    /* grid-row: 3/7; */
     justify-content: center;
 }
 
@@ -130,19 +127,9 @@ form {
     justify-self: center;
 }
 
-.field input {
-    accent-color: var(--input-accent);
-}
-
-[type = 'checkbox'] {
-    justify-self: start;
-    width: 25px;
-    height: 25px;
-}
-
 input:invalid {
     accent-color: var(--invalid-input);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,iCAAiC;IACjC,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,iCAAiC;IACjC,qCAAqC;IACrC,oCAAoC;IACpC,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    /* align-content: space-around; */\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    /* grid-template-rows: subgrid; */\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    /* grid-row: 3/7; */\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\n.field input {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -179,13 +166,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     --card-border-transp: rgba(218, 185, 38, 0);
     --invalid-input: red;
     --close-btn-hover: linear-gradient(red, black);
-    --input-accent: rgb(10, 44, 10);
+    --input-accent: rgb(13, 77, 7);
+    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+input {
+    accent-color: var(--input-accent);
+}
+
+[type = 'checkbox'] {
+    justify-self: start;
+    width: 25px;
+    height: 25px;
 }
 
 body {
@@ -195,8 +193,6 @@ body {
     grid-template-rows: 140px 1fr;
     background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
 }
-
-
 
 #header {
     display: grid;
@@ -220,16 +216,14 @@ body {
 }
 
 .card {
-    /* position: relative; */
     display: grid;
     grid-template-rows: max-content repeat(3, 1fr) max-content;
     background-color: var(--softBlack);
     color: white;
-    accent-color: var(--card-border);
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,+BAA+B;AACnC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;;;AAIA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,gCAAgC;IAChC,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(10, 44, 10);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    /* position: relative; */\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    accent-color: var(--card-border);\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,2DAA2D;AAC/D;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
