@@ -46,7 +46,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
 #modal-content .close-btn {
     position: relative;
     top: 5px;
-    right: -0;
+    right: 5px;
 }
 
 #form-buttons {
@@ -59,7 +59,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     padding: 5px 20px;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;AACb;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: -0;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
