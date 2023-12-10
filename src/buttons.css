@@ -1,0 +1,37 @@
+
+.button {
+    cursor: pointer;
+}
+
+.card-btn {
+    position: relative;
+    right: -7px;
+    top: -7px;
+    width: 20px;
+    justify-self: end;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    scale: 1.2;
+    color: white;
+}
+
+.card-btn:hover {
+    background-image: var(--close-btn-hover);
+}
+
+#form-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#modal-close-btn {
+    position: absolute;
+    right: -0;
+}
+
+#modal-toggle-btn {
+    place-self: center;
+    padding: 5px 20px;
+}
+

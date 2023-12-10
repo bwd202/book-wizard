@@ -1,4 +1,5 @@
 import './style.css'
+import './buttons.css'
 import { createCard } from './card'
 import { getBook } from './book'
 

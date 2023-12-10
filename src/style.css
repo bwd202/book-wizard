@@ -1,9 +1,9 @@
-
 :root {
     --softBlack: rgba(0,0,0,0.75);
     --card-border: rgb(218, 185, 38);
-    --close-btn-hover: rgb(255, 136, 0);
     --invalid-input: red;
+    --close-btn-hover: linear-gradient(red, black)
+
 }
 
 * {
@@ -16,11 +16,6 @@
 
 #header {
     display: grid;
-}
-
-#modal-toggle-btn {
-    place-self: center;
-    padding: 5px 20px;
 }
 
 #modal {
@@ -42,17 +37,6 @@
     color: white;
 }
 
-#modal-close-btn {
-    position: absolute;
-    right: -0;
-}
-
-
-#form-buttons {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
 #main {
     display: grid;
     padding: 60px;
@@ -71,10 +55,6 @@
     align-items: center;
 }
 
-.button {
-    cursor: pointer;
-}
-
 .hidden {
     visibility: hidden;
 }
@@ -84,24 +64,15 @@
 }
 
 .card {
-    position: relative;
+    /* position: relative; */
     display: grid;
+    grid-template-rows: max-content repeat(3, 1fr) max-content;
     background-color: var(--softBlack);
     color: white;
     accent-color: var(--card-border);
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}
-
-.card-btn {
-    position: absolute;
-    right: -0;
-    width: 20px;
-}
-
-.card-btn:hover {
-    background-color: var(--close-btn-hover);
 }
 
 /* ELEMENTS */
