@@ -19,6 +19,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@fontsource/gideon-roman": "^5.0.18"
+    "@fontsource/gideon-roman": "^5.0.18",
+    "@fontsource/handjet": "^5.0.3"
   }
 }

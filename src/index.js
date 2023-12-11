@@ -1,4 +1,5 @@
 import '@fontsource/gideon-roman/latin.css'
+import '@fontsource/handjet/latin-400.css'
 import './style.css'
 import './buttons.css'
 import './modal.css'

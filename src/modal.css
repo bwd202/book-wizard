@@ -39,6 +39,7 @@ form {
 
 .field label {
     justify-self: center;
+    font-size: 1.5rem;
 }
 
 input:invalid {

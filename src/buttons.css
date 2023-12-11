@@ -34,5 +34,11 @@
 #modal-toggle-btn {
     place-self: center;
     padding: 5px 20px;
+    background: url(./baroque-btn-red-500x500.jpg);
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    width: 200px;
+    height: 45px;
+    color: white;
 }
 

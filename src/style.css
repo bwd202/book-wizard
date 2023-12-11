@@ -25,6 +25,8 @@ input {
 }
 
 body {
+    font-family: 'Handjet';
+    font-size: 1.3rem;
     position: relative;
     height: 100vh;
     display: grid;
