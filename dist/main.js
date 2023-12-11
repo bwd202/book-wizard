@@ -96,15 +96,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
-
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./baroque-btn-red-500x500.jpg */ "./src/baroque-btn-red-500x500.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `
 .button {
@@ -140,17 +135,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
 }
 
 #modal-toggle-btn {
+    font-family: 'Gideon Roman';
+    /* font-size: 1.5rem; */
     place-self: center;
     padding: 5px 20px;
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-    border: 1px solid var(--card-border);
+    /* background: url('./gold-texture.jpg'); */
+    /* border: 1px solid black; */
     border-radius: 15px;
     width: 200px;
     height: 45px;
-    color: white;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,mDAA8C;IAC9C,oCAAoC;IACpC,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    background: url(./baroque-btn-red-500x500.jpg);\n    border: 1px solid var(--card-border);\n    border-radius: 15px;\n    width: 200px;\n    height: 45px;\n    color: white;\n}\n\n"],"sourceRoot":""}]);
+/* #modal-toggle-btn:hover {
+    background-color: var(--modal-btn-hover);
+} */`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,2BAA2B;IAC3B,uBAAuB;IACvB,kBAAkB;IAClB,iBAAiB;IACjB,2CAA2C;IAC3C,6BAA6B;IAC7B,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;;AAEA;;GAEG","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    font-family: 'Gideon Roman';\n    /* font-size: 1.5rem; */\n    place-self: center;\n    padding: 5px 20px;\n    /* background: url('./gold-texture.jpg'); */\n    /* border: 1px solid black; */\n    border-radius: 15px;\n    width: 200px;\n    height: 45px;\n}\n\n/* #modal-toggle-btn:hover {\n    background-color: var(--modal-btn-hover);\n} */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -249,7 +247,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! book_wizard.jpg */ "./src/book_wizard.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! library-background.jpg */ "./src/library-background.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -260,7 +258,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     --invalid-input: red;
     --close-btn-hover: linear-gradient(red, black);
     --input-accent: rgb(13, 77, 7);
-    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));
+    --modal-btn-hover: radial-gradient(gold 60%,white 5%, black);
 }
 
 * {
@@ -318,7 +316,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,2DAA2D;AAC/D;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,4DAA4D;AAChE;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --modal-btn-hover: radial-gradient(gold 60%,white 5%, black);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1191,20 +1189,10 @@ module.exports = __webpack_require__.p + "39b092bc3fa736266af2.woff2";
 
 /***/ }),
 
-/***/ "./src/baroque-btn-red-500x500.jpg":
-/*!*****************************************!*\
-  !*** ./src/baroque-btn-red-500x500.jpg ***!
-  \*****************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "7ee807d8d3920e34f0d7.jpg";
-
-/***/ }),
-
-/***/ "./src/book_wizard.jpg":
-/*!*****************************!*\
-  !*** ./src/book_wizard.jpg ***!
-  \*****************************/
+/***/ "./src/library-background.jpg":
+/*!************************************!*\
+  !*** ./src/library-background.jpg ***!
+  \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fa4976cea9b605356149.jpg";

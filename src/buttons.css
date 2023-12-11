@@ -32,13 +32,17 @@
 }
 
 #modal-toggle-btn {
+    font-family: 'Gideon Roman';
+    /* font-size: 1.5rem; */
     place-self: center;
     padding: 5px 20px;
-    background: url(./baroque-btn-red-500x500.jpg);
-    border: 1px solid var(--card-border);
+    /* background: url('./gold-texture.jpg'); */
+    /* border: 1px solid black; */
     border-radius: 15px;
     width: 200px;
     height: 45px;
-    color: white;
 }
 
+/* #modal-toggle-btn:hover {
+    background-color: var(--modal-btn-hover);
+} */

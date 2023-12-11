@@ -10,4 +10,4 @@ Build with &nbsp; ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-3
 
 ### CSS
 
-- gradients
+- color gradients
