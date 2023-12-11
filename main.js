@@ -42,6 +42,46 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* gideon-roman-latin-400-normal */
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/@fontsource/handjet/latin-400.css":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/@fontsource/handjet/latin-400.css ***!
+  \**********************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
+// Imports
+
+
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./files/handjet-latin-400-normal.woff2 */ "./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff2"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./files/handjet-latin-400-normal.woff */ "./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff"), __webpack_require__.b);
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* handjet-latin-400-normal */
+@font-face {
+  font-family: 'Handjet';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format('woff2'), url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format('woff');
+}`, "",{"version":3,"sources":["webpack://./node_modules/@fontsource/handjet/latin-400.css"],"names":[],"mappings":"AAAA,6BAA6B;AAC7B;EACE,sBAAsB;EACtB,kBAAkB;EAClB,kBAAkB;EAClB,gBAAgB;EAChB,oHAA2H;AAC7H","sourcesContent":["/* handjet-latin-400-normal */\n@font-face {\n  font-family: 'Handjet';\n  font-style: normal;\n  font-display: swap;\n  font-weight: 400;\n  src: url(./files/handjet-latin-400-normal.woff2) format('woff2'), url(./files/handjet-latin-400-normal.woff) format('woff');\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/buttons.css":
 /*!***************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/buttons.css ***!
@@ -56,10 +96,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./baroque-btn-red-500x500.jpg */ "./src/baroque-btn-red-500x500.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `
 .button {
@@ -97,9 +142,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
 #modal-toggle-btn {
     place-self: center;
     padding: 5px 20px;
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    width: 200px;
+    height: 45px;
+    color: white;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;AACrB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,mDAA8C;IAC9C,oCAAoC;IACpC,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    background: url(./baroque-btn-red-500x500.jpg);\n    border: 1px solid var(--card-border);\n    border-radius: 15px;\n    width: 200px;\n    height: 45px;\n    color: white;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -166,11 +217,12 @@ form {
 
 .field label {
     justify-self: center;
+    font-size: 1.5rem;
 }
 
 input:invalid {
     accent-color: var(--invalid-input);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -228,6 +280,8 @@ input {
 }
 
 body {
+    font-family: 'Handjet';
+    font-size: 1.3rem;
     position: relative;
     height: 100vh;
     display: grid;
@@ -264,7 +318,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,2DAA2D;AAC/D;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,2DAA2D;AAC/D;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAgC;AACpC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --gradientx: linear-gradient(rgb(13,77,7,1),rgb(15,23,9,0));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(book_wizard.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -475,6 +529,60 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_latin_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_latin_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_latin_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/@fontsource/handjet/latin-400.css":
+/*!********************************************************!*\
+  !*** ./node_modules/@fontsource/handjet/latin-400.css ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_latin_400_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js!./latin-400.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/@fontsource/handjet/latin-400.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_latin_400_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_latin_400_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_latin_400_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_latin_400_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -1063,6 +1171,36 @@ module.exports = __webpack_require__.p + "dde36fe88dc1dd0d8c33.woff2";
 
 /***/ }),
 
+/***/ "./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff ***!
+  \******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "020f42b85a2455d703c8.woff";
+
+/***/ }),
+
+/***/ "./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff2":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@fontsource/handjet/files/handjet-latin-400-normal.woff2 ***!
+  \*******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "39b092bc3fa736266af2.woff2";
+
+/***/ }),
+
+/***/ "./src/baroque-btn-red-500x500.jpg":
+/*!*****************************************!*\
+  !*** ./src/baroque-btn-red-500x500.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "7ee807d8d3920e34f0d7.jpg";
+
+/***/ }),
+
 /***/ "./src/book_wizard.jpg":
 /*!*****************************!*\
   !*** ./src/book_wizard.jpg ***!
@@ -1218,11 +1356,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fontsource_gideon_roman_latin_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fontsource/gideon-roman/latin.css */ "./node_modules/@fontsource/gideon-roman/latin.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _buttons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buttons.css */ "./src/buttons.css");
-/* harmony import */ var _modal_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal.css */ "./src/modal.css");
-/* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./card */ "./src/card.js");
-/* harmony import */ var _book__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./book */ "./src/book.js");
+/* harmony import */ var _fontsource_handjet_latin_400_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fontsource/handjet/latin-400.css */ "./node_modules/@fontsource/handjet/latin-400.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _buttons_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./buttons.css */ "./src/buttons.css");
+/* harmony import */ var _modal_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal.css */ "./src/modal.css");
+/* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./card */ "./src/card.js");
+/* harmony import */ var _book__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./book */ "./src/book.js");
+
 
 
 
@@ -1246,8 +1386,8 @@ let defaultBook1 = {
   read: true,
 }
 
-document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_4__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_5__.getBook)(defaultBook)))
-document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_4__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_5__.getBook)(defaultBook1)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_5__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_6__.getBook)(defaultBook)))
+document.querySelector('#main').append((0,_card__WEBPACK_IMPORTED_MODULE_5__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_6__.getBook)(defaultBook1)))
 
 // 
 
@@ -1284,7 +1424,7 @@ function displayNewBook(e) {
 
   if(hasRequired()) {
 
-    main.append((0,_card__WEBPACK_IMPORTED_MODULE_4__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_5__.getBook)()))
+    main.append((0,_card__WEBPACK_IMPORTED_MODULE_5__.createCard)((0,_book__WEBPACK_IMPORTED_MODULE_6__.getBook)()))
 
   }
 }
