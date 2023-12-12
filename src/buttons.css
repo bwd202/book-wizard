@@ -36,6 +36,7 @@
 }
 
 #modal-content .close-btn {
+    color: black;
     position: relative;
     top: 5px;
     right: 5px;

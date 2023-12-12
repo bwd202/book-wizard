@@ -19,6 +19,7 @@ Build with &nbsp; ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-3
 - fonts
 - color gradients
 - shadows
+- variables
 
 ### JS
 
