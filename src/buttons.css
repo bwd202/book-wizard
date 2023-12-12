@@ -22,6 +22,12 @@
 
 .modal-btn {
     background-image: url('./brass-button.jpg');
+    border-radius: 10px;
+    border: none;
+    background-size: 100%;
+    font-size: inherit;
+    font-family: 'Gideon Roman';
+
 }
 
 #modal-content .close-btn {
@@ -36,14 +42,8 @@
 }
 
 #modal-toggle-btn {
-    font-family: 'Gideon Roman';
-    font-size: inherit;
     place-self: center;
     padding: 5px 20px;
-    background-image: url('./brass-button.jpg');
-    background-size: 100%;
-    border: 1px solid var(--card-border);
-    border-radius: 15px;
     width: 200px;
     height: 45px;
 }

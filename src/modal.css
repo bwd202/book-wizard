@@ -18,7 +18,7 @@ h1 {
     grid-template-columns: subgrid;
     grid-column: 2;
     grid-template-rows: repeat(2, max-content) 1fr;
-    background: linear-gradient(var(--card-border), var(--card-border-transp));
+    background: linear-gradient(var(--gold), var(--transparent));
 }
 
 /* FORM */

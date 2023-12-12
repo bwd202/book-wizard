@@ -1,7 +1,6 @@
 :root {
     --softBlack: rgba(0,0,0,0.75);
-    --card-border: rgba(218, 185, 38, 1);
-    --card-border-transp: rgba(218, 185, 38, 0);
+    --gold: rgba(218, 185, 38, 1);
     --red: rgba(255,0,0,1);
     --transparent: rgba(0,0,0,0);
     --close-btn-hover: linear-gradient(var(--red), var(--transparent));
@@ -62,5 +61,5 @@ body {
     color: white;
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--gold);
 }
