@@ -33,16 +33,14 @@
 
 #modal-toggle-btn {
     font-family: 'Gideon Roman';
-    /* font-size: 1.5rem; */
+    font-size: inherit;
     place-self: center;
     padding: 5px 20px;
-    /* background: url('./gold-texture.jpg'); */
-    /* border: 1px solid black; */
+    background-image: url('./brass-button.jpg');
+    background-size: 100%;
+    border: 1px solid var(--card-border);
     border-radius: 15px;
     width: 200px;
     height: 45px;
 }
 
-/* #modal-toggle-btn:hover {
-    background-color: var(--modal-btn-hover);
-} */
