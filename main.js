@@ -128,6 +128,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     background-image: var(--close-btn-hover);
 }
 
+.modal-btn {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
 #modal-content .close-btn {
     position: relative;
     top: 5px;
@@ -152,7 +156,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     height: 45px;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,2BAA2B;IAC3B,kBAAkB;IAClB,kBAAkB;IAClB,iBAAiB;IACjB,yDAA2C;IAC3C,qBAAqB;IACrB,oCAAoC;IACpC,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    font-family: 'Gideon Roman';\n    font-size: inherit;\n    place-self: center;\n    padding: 5px 20px;\n    background-image: url('./brass-button.jpg');\n    background-size: 100%;\n    border: 1px solid var(--card-border);\n    border-radius: 15px;\n    width: 200px;\n    height: 45px;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;AAC/C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,2BAA2B;IAC3B,kBAAkB;IAClB,kBAAkB;IAClB,iBAAiB;IACjB,yDAA2C;IAC3C,qBAAqB;IACrB,oCAAoC;IACpC,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    font-family: 'Gideon Roman';\n    font-size: inherit;\n    place-self: center;\n    padding: 5px 20px;\n    background-image: url('./brass-button.jpg');\n    background-size: 100%;\n    border: 1px solid var(--card-border);\n    border-radius: 15px;\n    width: 200px;\n    height: 45px;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -223,8 +227,8 @@ form {
 }
 
 input:invalid {
-    accent-color: var(--invalid-input);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--invalid-input);\n}"],"sourceRoot":""}]);
+    accent-color: var(--red);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,0EAA0E;AAC9E;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--card-border), var(--card-border-transp));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -259,10 +263,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     --softBlack: rgba(0,0,0,0.75);
     --card-border: rgba(218, 185, 38, 1);
     --card-border-transp: rgba(218, 185, 38, 0);
-    --invalid-input: red;
-    --close-btn-hover: linear-gradient(red, black);
+    --red: rgba(255,0,0,1);
+    --transparent: rgba(0,0,0,0);
+    --close-btn-hover: linear-gradient(var(--red), var(--transparent));
     --input-accent: rgb(13, 77, 7);
-    --modal-btn-hover: radial-gradient(gold 60%,white 5%, black);
 }
 
 * {
@@ -320,7 +324,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--card-border);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,oBAAoB;IACpB,8CAA8C;IAC9C,8BAA8B;IAC9B,4DAA4D;AAChE;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --invalid-input: red;\n    --close-btn-hover: linear-gradient(red, black);\n    --input-accent: rgb(13, 77, 7);\n    --modal-btn-hover: radial-gradient(gold 60%,white 5%, black);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,oCAAoC;IACpC,2CAA2C;IAC3C,sBAAsB;IACtB,4BAA4B;IAC5B,kEAAkE;IAClE,8BAA8B;AAClC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,oCAAoC;AACxC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --card-border: rgba(218, 185, 38, 1);\n    --card-border-transp: rgba(218, 185, 38, 0);\n    --red: rgba(255,0,0,1);\n    --transparent: rgba(0,0,0,0);\n    --close-btn-hover: linear-gradient(var(--red), var(--transparent));\n    --input-accent: rgb(13, 77, 7);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--card-border);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1431,7 +1435,7 @@ function displayNewBook(e) {
   }
 }
 
-function hasRequired() {
+function hasRequired() {  //form validation
 
   let title = document.querySelector('#title')
 
