@@ -227,14 +227,14 @@ form {
     font-size: 1.5rem;
 }
 
-input:invalid {
-    accent-color: var(--red);
+.field label:hover {
+    text-shadow: 0 10px 10px var(--red);
+
 }
 
-.required:hover {
-    /* text-shadow: 2px 2px 5px red; */
-    /* box-shadow: 5px 5px var(--softBlack); */
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,kCAAkC;IAClC,0CAA0C;AAC9C","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}\n\n.required:hover {\n    /* text-shadow: 2px 2px 5px red; */\n    /* box-shadow: 5px 5px var(--softBlack); */\n}"],"sourceRoot":""}]);
+input:invalid {
+    accent-color: var(--red);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,mCAAmC;;AAEvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -271,7 +271,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
     --red: rgba(255,0,0,1);
     --transparent: rgba(0,0,0,0);
     --close-btn-hover: linear-gradient(var(--red), var(--transparent));
-    --input-accent: rgb(13, 77, 7);
 }
 
 * {
@@ -281,7 +280,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
 }
 
 input {
-    accent-color: var(--input-accent);
+    accent-color: var(--red);
 }
 
 [type = 'checkbox'] {
@@ -329,7 +328,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--gold);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,6BAA6B;IAC7B,sBAAsB;IACtB,4BAA4B;IAC5B,kEAAkE;IAClE,8BAA8B;AAClC;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --gold: rgba(218, 185, 38, 1);\n    --red: rgba(255,0,0,1);\n    --transparent: rgba(0,0,0,0);\n    --close-btn-hover: linear-gradient(var(--red), var(--transparent));\n    --input-accent: rgb(13, 77, 7);\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--input-accent);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--gold);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,6BAA6B;IAC7B,sBAAsB;IACtB,4BAA4B;IAC5B,kEAAkE;AACtE;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --gold: rgba(218, 185, 38, 1);\n    --red: rgba(255,0,0,1);\n    --transparent: rgba(0,0,0,0);\n    --close-btn-hover: linear-gradient(var(--red), var(--transparent));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--red);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: 'Handjet';\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--gold);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
