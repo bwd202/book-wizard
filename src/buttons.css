@@ -27,7 +27,8 @@
     background-size: 100%;
     font-size: inherit;
     font-family: 'Gideon Roman';
-
+    font-weight: 700;
+    box-shadow: 5px 5px 5px var(--softBlack);
 }
 
 #modal-content .close-btn {

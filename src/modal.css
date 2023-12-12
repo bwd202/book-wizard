@@ -45,3 +45,8 @@ form {
 input:invalid {
     accent-color: var(--red);
 }
+
+.required:hover {
+    /* text-shadow: 2px 2px 5px red; */
+    /* box-shadow: 5px 5px var(--softBlack); */
+}
