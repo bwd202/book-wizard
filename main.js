@@ -135,7 +135,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     background-size: 100%;
     font-size: inherit;
     font-family: 'Gideon Roman';
-
+    font-weight: 700;
+    box-shadow: 5px 5px 5px var(--softBlack);
 }
 
 #modal-content .close-btn {
@@ -156,7 +157,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     height: 45px;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,kBAAkB;IAClB,2BAA2B;;AAE/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    font-size: inherit;\n    font-family: 'Gideon Roman';\n\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 200px;\n    height: 45px;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":";AACA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,kBAAkB;IAClB,2BAA2B;IAC3B,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;AAChB","sourcesContent":["\n.button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    font-size: inherit;\n    font-family: 'Gideon Roman';\n    font-weight: 700;\n    box-shadow: 5px 5px 5px var(--softBlack);\n}\n\n#modal-content .close-btn {\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 200px;\n    height: 45px;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -228,7 +229,12 @@ form {
 
 input:invalid {
     accent-color: var(--red);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
+}
+
+.required:hover {
+    /* text-shadow: 2px 2px 5px red; */
+    /* box-shadow: 5px 5px var(--softBlack); */
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;AACrB;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,kCAAkC;IAClC,0CAA0C;AAC9C","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman';\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.5rem;\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}\n\n.required:hover {\n    /* text-shadow: 2px 2px 5px red; */\n    /* box-shadow: 5px 5px var(--softBlack); */\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
