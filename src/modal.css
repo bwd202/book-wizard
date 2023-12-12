@@ -43,5 +43,5 @@ form {
 }
 
 input:invalid {
-    accent-color: var(--invalid-input);
+    accent-color: var(--red);
 }

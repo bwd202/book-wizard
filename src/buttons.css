@@ -20,6 +20,10 @@
     background-image: var(--close-btn-hover);
 }
 
+.modal-btn {
+    background-image: url('./brass-button.jpg');
+}
+
 #modal-content .close-btn {
     position: relative;
     top: 5px;

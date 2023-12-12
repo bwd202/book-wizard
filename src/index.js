@@ -65,7 +65,7 @@ function displayNewBook(e) {
   }
 }
 
-function hasRequired() {
+function hasRequired() {  //form validation
 
   let title = document.querySelector('#title')
 
