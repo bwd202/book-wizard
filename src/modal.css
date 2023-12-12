@@ -39,7 +39,9 @@ form {
 
 .field label {
     justify-self: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    justify-self: end;
+    padding-right: 10px;
 }
 
 .field label:hover {

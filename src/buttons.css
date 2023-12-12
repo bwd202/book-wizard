@@ -1,4 +1,3 @@
-
 .button {
     cursor: pointer;
 }
@@ -29,6 +28,11 @@
     font-family: 'Gideon Roman';
     font-weight: 700;
     box-shadow: 5px 5px 5px var(--softBlack);
+}
+
+#bookForm .modal-btn {
+    width: 150px;
+    height: 35px;
 }
 
 #modal-content .close-btn {
