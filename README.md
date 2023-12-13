@@ -4,9 +4,10 @@ A browser app to keep track of books you read.
 
 [Live preview](https://bwd202.github.io/book-wizard/) ⬅️
 
-Build with &nbsp; ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-333?style=flat-square&logo=tailwind-css&logoColor=06b6d4)
-
 ## Features
+
+- ![screenshot 1](book-wizard1.jpg)
+- ![screenshot 2](book-wizard2.jpg)
 
 ### HTML
 
