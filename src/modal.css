@@ -42,11 +42,12 @@ form {
     font-size: 1.7rem;
     justify-self: end;
     padding-right: 10px;
+    text-transform: uppercase;
+
 }
 
 .field label:hover {
     text-shadow: 0 10px 10px var(--red);
-
 }
 
 input:invalid {
