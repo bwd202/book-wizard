@@ -24,9 +24,6 @@
     border-radius: 10px;
     border: none;
     background-size: 100%;
-    font-size: inherit;
-    font-family: 'Gideon Roman','Times New Roman', Times, serif;
-    font-weight: 700;
     box-shadow: 5px 5px 5px var(--softBlack);
 }
 
@@ -43,14 +40,21 @@
 }
 
 #form-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     gap: 20px;
+}
+
+#form-buttons .main-font {
+    font-size: 1.5rem;
 }
 
 #modal-toggle-btn {
     place-self: center;
     padding: 5px 20px;
-    width: 200px;
+    width: 270px;
     height: 45px;
+    font-size: 1.8rem;
+    white-space: nowrap;
 }
 

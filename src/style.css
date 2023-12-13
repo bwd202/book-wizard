@@ -23,7 +23,7 @@ input {
 }
 
 body {
-    font-family: Handjet, 'Courier New', Courier, monospace;
+    font-family: Handjet, Courier, monospace;
     font-size: 1.3rem;
     position: relative;
     height: 100vh;
@@ -34,6 +34,7 @@ body {
 
 #header {
     display: grid;
+    padding-top: 30px;
 }
 
 #main {
@@ -61,4 +62,9 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--gold);
+}
+
+.main-font {
+    font-family: 'Gideon Roman', Times, serif;
+    font-weight: 700;
 }

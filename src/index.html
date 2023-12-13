@@ -11,18 +11,18 @@
 
 <body class="grid">
   <div id="header">
-    <button id="modal-toggle-btn" class="button modal-btn">
+    <button id="modal-toggle-btn" class="button modal-btn main-font">
       Add New Book
     </button>
   </div>
   <div id="main"></div>
   <!-- Modal -->
-  <div id="modal" class="hidden">
-  <!-- <div id="modal" style='display: grid;'> -->
+  <!-- <div id="modal" class="hidden"> -->
+  <div id="modal" style='display: grid;'>
 
     <div id="modal-content">
       <button id="modal-close-btn" class="button close-btn">&times;</button>
-      <h1>New Book</h1>
+      <h1 class="main-font">Book Details</h1>
       <form action="#" id="bookForm">
         <div class="field">
           <label for="title" >Title</label>
@@ -41,10 +41,10 @@
           <input type="checkbox" id="read" class="button"/>
         </div>
         <div id="form-buttons" class="field">
-          <button id="add-book-btn" class="button modal-btn">
+          <button id="add-book-btn" class="button modal-btn main-font">
             Add Book
           </button>
-          <button id="reset-modal-btn" class="button modal-btn">
+          <button id="reset-modal-btn" class="button modal-btn main-font">
             Reset
           </button>
         </div>

@@ -1,6 +1,7 @@
 h1 {
     place-self: center;
-    font-family: 'Gideon Roman', 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    font-size: 3rem;
 }
 
 #modal {
@@ -12,9 +13,10 @@ h1 {
 }
 
 #modal-content {
+    gap: 15px;
+    padding-top: 30px;
     position: relative;
     display: grid;
-    gap: 10px;
     grid-template-columns: subgrid;
     grid-column: 2;
     grid-template-rows: repeat(2, max-content) 1fr;
@@ -28,6 +30,7 @@ form {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
     justify-content: center;
+    gap: 20px 10px;
 }
 
 .field {
@@ -38,13 +41,11 @@ form {
 }
 
 .field label {
-    justify-self: center;
     font-size: 1.6rem;
     justify-self: end;
-    padding-right: 10px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 .field label:hover {
