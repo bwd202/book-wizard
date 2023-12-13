@@ -23,7 +23,7 @@ input {
 }
 
 body {
-    font-family: 'Handjet';
+    font-family: Handjet, 'Courier New', Courier, monospace;
     font-size: 1.3rem;
     position: relative;
     height: 100vh;

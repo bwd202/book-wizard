@@ -1,6 +1,6 @@
 h1 {
     place-self: center;
-    font-family: 'Gideon Roman';
+    font-family: 'Gideon Roman', 'Times New Roman', Times, serif;
 }
 
 #modal {
