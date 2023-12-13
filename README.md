@@ -6,8 +6,8 @@ A browser app to keep track of books you read.
 
 ## Features
 
-- ![screenshot 1](book-wizard1.jpg)
-- ![screenshot 2](book-wizard2.jpg)
+![screenshot 1](book-wizard1.jpg)
+![screenshot 2](book-wizard2.jpg)
 
 ### HTML
 
