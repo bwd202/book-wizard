@@ -132,9 +132,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
     border-radius: 10px;
     border: none;
     background-size: 100%;
-    font-size: inherit;
-    font-family: 'Gideon Roman','Times New Roman', Times, serif;
-    font-weight: 700;
     box-shadow: 5px 5px 5px var(--softBlack);
 }
 
@@ -151,18 +148,25 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
 }
 
 #form-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     gap: 20px;
+}
+
+#form-buttons .main-font {
+    font-size: 1.5rem;
 }
 
 #modal-toggle-btn {
     place-self: center;
     padding: 5px 20px;
-    width: 200px;
+    width: 270px;
     height: 45px;
+    font-size: 1.8rem;
+    white-space: nowrap;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,kBAAkB;IAClB,2DAA2D;IAC3D,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,8BAA8B;IAC9B,SAAS;AACb;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;AAChB","sourcesContent":[".button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    font-size: inherit;\n    font-family: 'Gideon Roman','Times New Roman', Times, serif;\n    font-weight: 700;\n    box-shadow: 5px 5px 5px var(--softBlack);\n}\n\n#bookForm .modal-btn {\n    width: 150px;\n    height: 35px;\n}\n\n#modal-content .close-btn {\n    color: black;\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 200px;\n    height: 45px;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;IACV,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,qCAAqC;IACrC,uBAAuB;IACvB,SAAS;AACb;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;IACZ,iBAAiB;IACjB,mBAAmB;AACvB","sourcesContent":[".button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    box-shadow: 5px 5px 5px var(--softBlack);\n}\n\n#bookForm .modal-btn {\n    width: 150px;\n    height: 35px;\n}\n\n#modal-content .close-btn {\n    color: black;\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n    gap: 20px;\n}\n\n#form-buttons .main-font {\n    font-size: 1.5rem;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 270px;\n    height: 45px;\n    font-size: 1.8rem;\n    white-space: nowrap;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -190,7 +194,8 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `h1 {
     place-self: center;
-    font-family: 'Gideon Roman', 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    font-size: 3rem;
 }
 
 #modal {
@@ -202,9 +207,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h1 {
 }
 
 #modal-content {
+    gap: 15px;
+    padding-top: 30px;
     position: relative;
     display: grid;
-    gap: 10px;
     grid-template-columns: subgrid;
     grid-column: 2;
     grid-template-rows: repeat(2, max-content) 1fr;
@@ -218,6 +224,7 @@ form {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
     justify-content: center;
+    gap: 20px 10px;
 }
 
 .field {
@@ -228,13 +235,11 @@ form {
 }
 
 .field label {
-    justify-self: center;
     font-size: 1.6rem;
     justify-self: end;
-    padding-right: 10px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 .field label:hover {
@@ -243,7 +248,7 @@ form {
 
 input:invalid {
     accent-color: var(--red);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,4DAA4D;AAChE;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,oBAAoB;IACpB,iBAAiB;IACjB,iBAAiB;IACjB,mBAAmB;IACnB,yBAAyB;IACzB,qBAAqB;;AAEzB;;AAEA;IACI,mCAAmC;AACvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    font-family: 'Gideon Roman', 'Times New Roman', Times, serif;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    display: grid;\n    gap: 10px;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    justify-self: center;\n    font-size: 1.6rem;\n    justify-self: end;\n    padding-right: 10px;\n    text-transform: uppercase;\n    letter-spacing: 1.5px;\n\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,SAAS;IACT,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,mCAAmC;AACvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    letter-spacing: 5px;\n    font-size: 3rem;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    gap: 15px;\n    padding-top: 30px;\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n    gap: 20px 10px;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    font-size: 1.6rem;\n    justify-self: end;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 700;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -299,7 +304,7 @@ input {
 }
 
 body {
-    font-family: Handjet, 'Courier New', Courier, monospace;
+    font-family: Handjet, Courier, monospace;
     font-size: 1.3rem;
     position: relative;
     height: 100vh;
@@ -310,6 +315,7 @@ body {
 
 #header {
     display: grid;
+    padding-top: 30px;
 }
 
 #main {
@@ -337,7 +343,12 @@ body {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid var(--gold);
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,6BAA6B;IAC7B,sBAAsB;IACtB,4BAA4B;IAC5B,kEAAkE;AACtE;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,uDAAuD;IACvD,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --gold: rgba(218, 185, 38, 1);\n    --red: rgba(255,0,0,1);\n    --transparent: rgba(0,0,0,0);\n    --close-btn-hover: linear-gradient(var(--red), var(--transparent));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--red);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: Handjet, 'Courier New', Courier, monospace;\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--gold);\n}"],"sourceRoot":""}]);
+}
+
+.main-font {
+    font-family: 'Gideon Roman', Times, serif;
+    font-weight: 700;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,6BAA6B;IAC7B,6BAA6B;IAC7B,sBAAsB;IACtB,4BAA4B;IAC5B,kEAAkE;AACtE;;AAEA;IACI,sBAAsB;IACtB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,wCAAwC;IACxC,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,6BAA6B;IAC7B,mDAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,iBAAiB;AACrB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,8CAA8C;IAC9C,qBAAqB;IACrB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,0DAA0D;IAC1D,kCAAkC;IAClC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC;;AAEA;IACI,yCAAyC;IACzC,gBAAgB;AACpB","sourcesContent":[":root {\n    --softBlack: rgba(0,0,0,0.75);\n    --gold: rgba(218, 185, 38, 1);\n    --red: rgba(255,0,0,1);\n    --transparent: rgba(0,0,0,0);\n    --close-btn-hover: linear-gradient(var(--red), var(--transparent));\n}\n\n* {\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n}\n\ninput {\n    accent-color: var(--red);\n}\n\n[type = 'checkbox'] {\n    justify-self: start;\n    width: 25px;\n    height: 25px;\n}\n\nbody {\n    font-family: Handjet, Courier, monospace;\n    font-size: 1.3rem;\n    position: relative;\n    height: 100vh;\n    display: grid;\n    grid-template-rows: 140px 1fr;\n    background: url(library-background.jpg);\n}\n\n#header {\n    display: grid;\n    padding-top: 30px;\n}\n\n#main {\n    display: grid;\n    padding: 60px;\n    grid-template-columns: repeat(auto-fit, 200px);\n    grid-auto-rows: 200px;\n    gap: 40px;\n    justify-content: center;\n}\n\n.hidden {\n    visibility: hidden;\n}\n\n.visible {\n    display: grid;\n}\n\n.card {\n    display: grid;\n    grid-template-rows: max-content repeat(3, 1fr) max-content;\n    background-color: var(--softBlack);\n    color: white;\n    padding: 15px;\n    border-radius: 15px;\n    border: 1px solid var(--gold);\n}\n\n.main-font {\n    font-family: 'Gideon Roman', Times, serif;\n    font-weight: 700;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
