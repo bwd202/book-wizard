@@ -2,16 +2,17 @@
     cursor: pointer;
 }
 
-.close-btn {
-    position: relative;
-    right: -7px;
-    top: -7px;
+.close-btn {    /* contains fallback props for grid */
     width: 20px;
     justify-self: end;
     border: none;
     background-color: transparent;
     border-radius: 5px;
     scale: 1.2;
+}
+
+.close-btn:hover {
+    background-image: var(--close-btn-hover);
 }
 
 .card .close-btn {
@@ -21,8 +22,10 @@
     color: white;
 }
 
-.close-btn:hover {
-    background-image: var(--close-btn-hover);
+#modal-content .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 .modal-btn {
@@ -36,13 +39,6 @@
 #bookForm .modal-btn {
     width: 150px;
     height: 35px;
-}
-
-#modal-content .close-btn {
-    color: black;
-    position: relative;
-    top: 5px;
-    right: 5px;
 }
 
 #form-buttons {

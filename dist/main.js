@@ -110,16 +110,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
     cursor: pointer;
 }
 
-.close-btn {
-    position: relative;
-    right: -7px;
-    top: -7px;
+.close-btn {    /* contains fallback props for grid */
     width: 20px;
     justify-self: end;
     border: none;
     background-color: transparent;
     border-radius: 5px;
     scale: 1.2;
+}
+
+.close-btn:hover {
+    background-image: var(--close-btn-hover);
 }
 
 .card .close-btn {
@@ -129,8 +130,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
     color: white;
 }
 
-.close-btn:hover {
-    background-image: var(--close-btn-hover);
+#modal-content .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 .modal-btn {
@@ -144,13 +147,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
 #bookForm .modal-btn {
     width: 150px;
     height: 35px;
-}
-
-#modal-content .close-btn {
-    color: black;
-    position: relative;
-    top: 5px;
-    right: 5px;
 }
 
 #form-buttons {
@@ -172,7 +168,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.button {
     white-space: nowrap;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;AACd;;AAEA;IACI,kBAAkB;IAClB,UAAU;IACV,SAAS;IACT,YAAY;AAChB;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,qCAAqC;IACrC,uBAAuB;IACvB,SAAS;AACb;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;IACZ,iBAAiB;IACjB,mBAAmB;AACvB","sourcesContent":[".button {\n    cursor: pointer;\n}\n\n.close-btn {\n    position: relative;\n    right: -7px;\n    top: -7px;\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n}\n\n.card .close-btn {\n    position: absolute;\n    right: 5px;\n    top: 10px;\n    color: white;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    box-shadow: 5px 5px 5px var(--softBlack);\n}\n\n#bookForm .modal-btn {\n    width: 150px;\n    height: 35px;\n}\n\n#modal-content .close-btn {\n    color: black;\n    position: relative;\n    top: 5px;\n    right: 5px;\n}\n\n#form-buttons {\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n    gap: 20px;\n}\n\n#form-buttons .main-font {\n    font-size: 1.5rem;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 270px;\n    height: 45px;\n    font-size: 1.8rem;\n    white-space: nowrap;\n}\n\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/buttons.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA,gBAAgB,qCAAqC;IACjD,WAAW;IACX,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;AACd;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,kBAAkB;IAClB,UAAU;IACV,SAAS;IACT,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;;AAEA;IACI,yDAA2C;IAC3C,mBAAmB;IACnB,YAAY;IACZ,qBAAqB;IACrB,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,qCAAqC;IACrC,uBAAuB;IACvB,SAAS;AACb;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,YAAY;IACZ,iBAAiB;IACjB,mBAAmB;AACvB","sourcesContent":[".button {\n    cursor: pointer;\n}\n\n.close-btn {    /* contains fallback props for grid */\n    width: 20px;\n    justify-self: end;\n    border: none;\n    background-color: transparent;\n    border-radius: 5px;\n    scale: 1.2;\n}\n\n.close-btn:hover {\n    background-image: var(--close-btn-hover);\n}\n\n.card .close-btn {\n    position: absolute;\n    right: 5px;\n    top: 10px;\n    color: white;\n}\n\n#modal-content .close-btn {\n    position: absolute;\n    top: 5px;\n    right: 5px;\n}\n\n.modal-btn {\n    background-image: url('./brass-button.jpg');\n    border-radius: 10px;\n    border: none;\n    background-size: 100%;\n    box-shadow: 5px 5px 5px var(--softBlack);\n}\n\n#bookForm .modal-btn {\n    width: 150px;\n    height: 35px;\n}\n\n#form-buttons {\n    grid-template-columns: repeat(2, 1fr);\n    justify-content: center;\n    gap: 20px;\n}\n\n#form-buttons .main-font {\n    font-size: 1.5rem;\n}\n\n#modal-toggle-btn {\n    place-self: center;\n    padding: 5px 20px;\n    width: 270px;\n    height: 45px;\n    font-size: 1.8rem;\n    white-space: nowrap;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -213,9 +209,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h1 {
 }
 
 #modal-content {
+    position: relative;
     gap: 15px;
     padding-top: 30px;
-    position: relative;
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 2;
@@ -254,7 +250,7 @@ form {
 
 input:invalid {
     accent-color: var(--red);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,SAAS;IACT,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,mCAAmC;AACvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    letter-spacing: 5px;\n    font-size: 3rem;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    gap: 15px;\n    padding-top: 30px;\n    position: relative;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n    gap: 20px 10px;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    font-size: 1.6rem;\n    justify-self: end;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 700;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,mCAAmC;AACvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    letter-spacing: 5px;\n    font-size: 3rem;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    gap: 15px;\n    padding-top: 30px;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n    gap: 20px 10px;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    font-size: 1.6rem;\n    justify-self: end;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 700;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

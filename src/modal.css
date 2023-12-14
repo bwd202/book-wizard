@@ -13,9 +13,9 @@ h1 {
 }
 
 #modal-content {
+    position: relative;
     gap: 15px;
     padding-top: 30px;
-    position: relative;
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 2;
