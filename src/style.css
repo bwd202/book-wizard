@@ -55,6 +55,7 @@ body {
 }
 
 .card {
+    position:relative;
     display: grid;
     grid-template-rows: max-content repeat(3, 1fr) max-content;
     background-color: var(--softBlack);

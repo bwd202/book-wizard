@@ -12,6 +12,12 @@
     background-color: transparent;
     border-radius: 5px;
     scale: 1.2;
+}
+
+.card .close-btn {
+    position: absolute;
+    right: 5px;
+    top: 10px;
     color: white;
 }
 
