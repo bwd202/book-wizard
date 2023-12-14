@@ -50,6 +50,7 @@ form {
 
 .field label:hover {
     text-shadow: 0 10px 10px var(--red);
+    cursor: crosshair;
 }
 
 input:invalid {

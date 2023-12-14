@@ -246,11 +246,12 @@ form {
 
 .field label:hover {
     text-shadow: 0 10px 10px var(--red);
+    cursor: crosshair;
 }
 
 input:invalid {
     accent-color: var(--red);
-}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,mCAAmC;AACvC;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    letter-spacing: 5px;\n    font-size: 3rem;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    gap: 15px;\n    padding-top: 30px;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n    gap: 20px 10px;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    font-size: 1.6rem;\n    justify-self: end;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 700;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modal.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,iDAAiD;IACjD,8BAA8B;IAC9B,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,cAAc;IACd,8CAA8C;IAC9C,4DAA4D;AAChE;;AAEA,SAAS;;AAET;IACI,aAAa;IACb,qCAAqC;IACrC,oCAAoC;IACpC,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,mCAAmC;IACnC,iBAAiB;AACrB;;AAEA;IACI,wBAAwB;AAC5B","sourcesContent":["h1 {\n    place-self: center;\n    letter-spacing: 5px;\n    font-size: 3rem;\n}\n\n#modal {\n    position: absolute;\n    inset: 0;\n    grid-template-columns: 30vw max(500px, 30vw) 30vw;\n    justify-content: space-between;\n    background: var(--softBlack);\n}\n\n#modal-content {\n    position: relative;\n    gap: 15px;\n    padding-top: 30px;\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2;\n    grid-template-rows: repeat(2, max-content) 1fr;\n    background: linear-gradient(var(--gold), var(--transparent));\n}\n\n/* FORM */\n\nform {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(5, 100px);\n    justify-content: center;\n    gap: 20px 10px;\n}\n\n.field {\n    display: grid;\n    grid-template-columns: subgrid;\n    grid-column: 2/4;\n    align-items: center;\n}\n\n.field label {\n    font-size: 1.6rem;\n    justify-self: end;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 700;\n}\n\n.field label:hover {\n    text-shadow: 0 10px 10px var(--red);\n    cursor: crosshair;\n}\n\ninput:invalid {\n    accent-color: var(--red);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1180,7 +1181,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let myLibrary = [];
-
 
 /***/ }),
 
