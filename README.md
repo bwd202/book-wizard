@@ -1,4 +1,4 @@
-# book-wizard
+# Book Wizard
 
 A browser app to keep track of books you read.
 
