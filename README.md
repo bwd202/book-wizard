@@ -2,7 +2,7 @@
 
 A browser app to keep track of books you read.
 
-[Live preview](https://bwd202.github.io/book-wizard/) ⬅️
+[Live preview](https://bwd202.github.io/book-wizard/)
 
 ## Features
 
